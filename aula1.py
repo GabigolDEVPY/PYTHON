@@ -1,4 +1,3 @@
-# Entrada de dados do usuário
 nome = input('Digite seu nome: ')
 idade = int(input('Digite sua idade: '))
 login = input('Digite seu login: ').lower()
@@ -6,39 +5,47 @@ senha = input('Digite sua senha: ')
 altura = float(input('Digite sua altura em metros: '))
 peso = float(input('Digite seu peso em KG: '))
 
-# Definindo critérios permitidos
 idade_permitida = 18
+senha_permitida = 12345678
 login_permitido = 'gabriel'
-senha_permitida = '12345678'
 
-# Função para exibir informações do usuário e tamanho da roupa
-def exibir_informacoes(nome, idade, altura, peso, tamanho):
-    print(f"""
-    Seu nome é {nome} e sua idade é {idade}
-    Seu nome tem {len(nome)} letras
-    Seu nome de trás pra frente é {nome[::-1]}
-    A primeira letra do seu nome é {nome[0]}
-    A última letra do seu nome é {nome[-1]}
-    Você veste tamanho {tamanho}
-    """)
-
-# Verificações de login, senha e idade
 if nome and idade:
     if idade >= idade_permitida:
-        if login == login_permitido and senha == senha_permitida:
+        if login == login_permitido and idade == idade_permitida:
             if altura <= 1.60 and peso <= 60:
-                exibir_informacoes(nome, idade, altura, peso, 'P')
+                print(f'Seu nome Ã© {nome} e sua idade Ã© {idade}')
+                print(f'seu nome tem len{nome} letras')
+                print(f'Seu nome de trÃ¡s pra frente Ã© {nome[::-1]}')
+                print(f'a primeira letra do seu nome Ã© {nome[0]}') 
+                print(f'e a Ãºltima letra do seu nome Ã© {nome[-1]}')
+                print('VocÃª veste tamanho P') 
             elif altura <= 1.70 and peso <= 70:
-                exibir_informacoes(nome, idade, altura, peso, 'M')
+                print(f'Seu nome Ã© {nome} e sua idade Ã© {idade}')
+                print(f'seu nome tem len{nome} letras')
+                print(f'Seu nome de trÃ¡s pra frente Ã© {nome[::-1]}')
+                print(f'a primeira letra do seu nome Ã© {nome[0]}') 
+                print(f'e a Ãºltima letra do seu nome Ã© {nome[-1]}')
+                print('VocÃª veste tamanho M')
+                
             elif altura <= 1.80 and peso <= 80:
-                exibir_informacoes(nome, idade, altura, peso, 'G')
+                print(f'Seu nome Ã© {nome} e sua idade Ã© {idade}')
+                print(f'seu nome tem len{nome} letras')
+                print(f'Seu nome de trÃ¡s pra frente Ã© {nome[::-1]}')
+                print(f'a primeira letra do seu nome Ã© {nome[0]}') 
+                print(f'e a Ãºltima letra do seu nome Ã© {nome[-1]}')
+                print('VocÃª veste tamanho g')
             elif altura <= 1.90 and peso <= 90:
-                exibir_informacoes(nome, idade, altura, peso, 'GG')
+                print(f'Seu nome Ã© {nome} e sua idade Ã© {idade}')
+                print(f'seu nome tem len{nome} letras')
+                print(f'Seu nome de trÃ¡s pra frente Ã© {nome[::-1]}')
+                print(f'a primeira letra do seu nome Ã© {nome[0]}') 
+                print(f'e a Ãºltima letra do seu nome Ã© {nome[-1]}')
+                print('VocÃª veste tamanho gg')
             else:
-                print('Não encontramos seu tamanho')
+                print('NÃ£o encontramos seu tamanho')
         else:
-            print('Login ou senha não permitidos')
+            print('Login e senha nÃ£o permitidos')        
     else:
-        print('Sua idade não é permitida')
+        print('Sua idade nÃ£o Ã© permitida')                
 else:
-    print('Você não digitou seu nome ou idade')
+    print('VocÃª nÃ£o digitou seu nome e idade')
