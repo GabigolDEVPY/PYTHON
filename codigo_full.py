@@ -27,7 +27,7 @@ if login == login_permitido:
             print('Acesso bloqueado, você tentou mais de 5 vezes')
             break
 if senha == senha_permitida:
-    nome = input('Digite seu nome: ')
+    nome = input('Digite seu nome: ').upper()
     peso = float(input("Digite seu peso em KG: "))
     altura = float(input('Digite sua altura: '))
 
@@ -98,15 +98,61 @@ else:
 
 descobrir = input('Digite um texto: ').lower()
 
-
 palavra = input('Digite a palavra que quer saber quantas vezes aparece no texto: ').lower()
-
-
 palavra_apareceu_mais = descobrir.count(palavra)
 
 print(f' a palavra que apareceu mais foi {palavra} que apareceu {palavra_apareceu_mais}X')
 
 
+entrada = input('digite a hora em números inteiros: ')
+
+try:
+    hora = int(entrada)
+
+    if hora >= 0 and hora <= 11:
+        print('bom dia')
+    elif hora >= 12 and hora <= 17:
+        print ('Boa tarde')
+    elif hora >= 18 and hora <= 23:
+        print('boa noite')
+
+    else:
+        print('não conheço está hora!')
+
+except:
+    print("Por favor, digite apenas números inteiros")
+
+palavra_secreta = 'gabriel'
+tentativas = 0
+letras_acertadas = ''
+
+while True:
+    letra_digitada = input('Digite uma letra: ')
+    if len(letra_digitada) > 1:
+        print('Digite apenas uma letra')
+        continue
+
+    if letra_digitada in palavra_secreta:
+        letras_acertadas += letra_digitada
+
+    palavra_formada = ''
+    for letra in palavra_secreta:
+        if letra in letras_acertadas:
+            palavra_formada += letra
+        else:
+            palavra_formada += '*'
+    print(palavra_formada)
+
+    if palavra_formada == palavra_secreta:
+        print('parabens você ganhou')
+        print(tentativas)
+        break
+
+lista = [10, 20, 30, 40]
+lista[2] = 300
+del lista[2]
+print(lista[0])
+print(lista[2])    
 
 
 
