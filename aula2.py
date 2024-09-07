@@ -20,6 +20,7 @@ while i < len(frase):
 
 print(f'''A letra que apareceu mais vezes foi
     {letra_apareceu_mais} que apareceu {vezes_apareceu}x
+    
 ''')
 
 
