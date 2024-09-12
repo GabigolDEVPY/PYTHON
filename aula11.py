@@ -1,5 +1,5 @@
 lista = [20, 30, 40]
-lista.append('Gabriel')
+lista.append('just')
 nome = lista.pop()
 lista.append(3)
 del lista[-1]
