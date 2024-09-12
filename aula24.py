@@ -40,7 +40,7 @@ while True:
             print('CPF válido')
         else:
             print('CPF inválido')  
-        cpf = '0'
+
 
 
 
