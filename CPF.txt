@@ -24,3 +24,4 @@ contrário disso:
 O primeiro dígito do CPF é 7
 "
 100% preciso
+que coisa
