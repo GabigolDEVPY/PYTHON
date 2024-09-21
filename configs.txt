@@ -1,0 +1,21 @@
+{
+    "window.zoomLevel": 2,
+    "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 18,
+    "code-runner.executorMap": {
+        "python": "clear ; python -u",
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.ignoreSelection": true,
+    "git.autofetch": true,
+    "symbols.hidesExplorerArrows": false,
+    "workbench.preferredHighContrastColorTheme": "Default Dark Modern",
+    "workbench.preferredHighContrastLightColorTheme": "Atom One Dark",
+    "workbench.preferredLightColorTheme": "Atom One Dark",
+    "mktypesound.sound": 0,
+    "tabnine.experimentalAutoImports": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "workbench.colorTheme": "After Dark No Italics"
+}
