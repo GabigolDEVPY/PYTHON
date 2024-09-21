@@ -13,6 +13,7 @@ def criar_multiplicador(multiplicador):
         x = 4        
         return numero * multiplicador
     return multiplicar
+print()
 
 
 strong = criar_multiplicador(4)(6) # resultado da função = 24
