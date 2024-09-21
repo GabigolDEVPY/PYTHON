@@ -5,4 +5,4 @@ num2 = Decimal('0.2')
 
 resultado = num1 + num2
 print(resultado)
-# Saída: 0.3
+
