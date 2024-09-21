@@ -19,5 +19,6 @@ print()
 strong = criar_multiplicador(4)(6) # resultado da função = 24
 
 
-somma = strong * tal # essa variável soma os resultados/ retorno das duas funções 
+somma = strong * tal # essa variável soma os resultados/ retorno das duas funções  
 print(somma)
+print(tal)
