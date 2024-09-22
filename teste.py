@@ -5,6 +5,8 @@ def tempo():
     print('Aguarde 3 segundos')
     time.sleep(3)
 
+
+
 def limpar():
     os.system('cls')
     
