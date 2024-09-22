@@ -3,7 +3,7 @@ Retorno de valores das funções (return)
 """
 
 
-def soma(x, y):
+def soma(x, y):   #função somam def, define uma função, e chama quando estiver listada
     if x > 10:
         return [10, 20]
     return x + y
