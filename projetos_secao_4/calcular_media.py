@@ -17,4 +17,5 @@ while True:
             print(f'Quantidade peso atualmente {soma}')
 
         except Exception:
-            print('Digite um número válido')      
+            print('Digite um número válido')     #soma
+             
