@@ -3,7 +3,8 @@ import time
 import json
 from functions import validador, validnome, idadevalid
 
-ARQUIVO_CLIENTES = 'Projeto_lista/clientes.json'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARQUIVO_CLIENTES = os.path.join(BASE_DIR, 'clientes.json')
 
 def limpar():
     os.system('cls')
@@ -91,7 +92,7 @@ def listar():
     for i, cliente in enumerate(clientes):
         clientecpf = cliente["CPF"]
         print(f'{i+1}. {cliente["nome"]} ID:{clientecpf[:5]}') 
-        continuar = input("press SPACE to continue...")    
+        continuar = input("press [ENTER] to continue...")    
 
 
 def opcao():
