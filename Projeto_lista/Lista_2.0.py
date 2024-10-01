@@ -3,6 +3,7 @@ import time
 import json
 from functions import validador, validnome, idadevalid
 
+# Obter o caminho absoluto para o arquivo clientes.json na mesma pasta do script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_CLIENTES = os.path.join(BASE_DIR, 'clientes.json')
 
@@ -11,16 +12,18 @@ def limpar():
 def descansar():
     time.sleep(3)
 
+# Função para salvar a lista de clientes em um arquivo JSON
 def salvar_clientes():
     with open(ARQUIVO_CLIENTES, 'w') as f:
         json.dump(clientes, f)
 
+# Função para carregar a lista de clientes do arquivo JSON
 def carregar_clientes():
     try:
         with open(ARQUIVO_CLIENTES, 'r') as f:
             return json.load(f)
     except FileNotFoundError:
-        return []
+        return [] # Retorna uma lista vazia se o arquivo não existir ou estiver vazio/corrompido
 
 clientes = carregar_clientes()
 
