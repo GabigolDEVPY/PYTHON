@@ -95,7 +95,7 @@ def listar():
     for i, cliente in enumerate(clientes):
         clientecpf = cliente["CPF"]
         print(f'{i+1}. {cliente["nome"]} ID:{clientecpf[:5]}') 
-        continuar = input("press [ENTER] to continue...")    
+    continuar = input("press [ENTER] to continue...")    
 
 
 def opcao():

@@ -34,3 +34,5 @@ for CPF in range(quantidade):
 
 
     print(cpf_gerado)
+
+fechar = input('Press ENTER para fechar')
