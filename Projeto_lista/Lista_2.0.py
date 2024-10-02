@@ -25,6 +25,9 @@ def carregar_clientes():
     except FileNotFoundError:
         return [] # Retorna uma lista vazia se o arquivo não existir ou estiver vazio/corrompido
 
+
+
+
 clientes = carregar_clientes()
 
 def excluir():
@@ -35,35 +38,47 @@ def excluir():
             descansar()
             break
         ID = input('Digite o ID do cliente que deseja excluir:')
-        for cliente in clientes:
+        print('Pressione [-] para voltar')
+        if ID == '-':
+            break
+        for i, cliente in enumerate(clientes):
             if ID in cliente["CPF"]:
-                del clientes[cliente]
-                break
-            else:
-                print('ID inválido')
-                    
+                del clientes[i]
+                print('Cliente excluído!')
+                descansar()
+            return   
+
+
 
 
 def adiciona_cliente():
-    nome = validnome()
-    limpar()
-    CPF = validador()
-    for cliente in clientes:
-        if cliente["CPF"] == CPF:
-            print('Esse cliente já existe na lista')
-            descansar()
-            return    
-    idade = idadevalid()
-
-    cliente = {
-        "nome": nome,
-        "CPF": CPF,
-        "idade": idade
-    }
-    clientes.append(cliente)
-    limpar()
-    print(f'Cliente {cliente["nome"]} foi cadastrado')
-    descansar()
+    while True:
+        print('Pressione [-] para voltar')
+        nome = validnome()
+        if nome == '-':
+            break
+        limpar()
+        CPF = validador()
+        if CPF == '-':
+            break
+        for cliente in clientes:
+            if cliente["CPF"] == CPF:
+                print('Esse cliente já existe na lista')
+                descansar()
+                return    
+        idade = idadevalid()
+        if idade == '-':
+            break
+        cliente = {
+            "nome": nome,
+            "CPF": CPF,
+            "idade": idade
+        }
+        clientes.append(cliente)
+        limpar()
+        print(f'Cliente {cliente["nome"]} foi cadastrado')
+        descansar()
+        break
 
 
 def buscar():
@@ -91,7 +106,6 @@ def buscar():
 def listar():
     if clientes == '' or len(clientes) == 0:
         print('Não há clientes na lista')
-        descansar()
     for i, cliente in enumerate(clientes):
         clientecpf = cliente["CPF"]
         print(f'{i+1}. {cliente["nome"]} ID:{clientecpf[:5]}') 
