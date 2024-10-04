@@ -12,17 +12,14 @@ def ordena(item):
 
 lista.sort(key=ordena)
 
-
-for list in lista:
-    print(list)
-print()
+print(lista)
 
 def exibir(lista):
-    for item in lista:
-        print(item)
+    for list in lista:
+        print(list)
         print()
+    
 
-l1 = sorted(lista, key=lambda list: list['nome'])
+lista_ordem = sorted(lista, key=lambda list: list['nome'])
 
-exibir(l1)
-
+exibir(lista_ordem)
