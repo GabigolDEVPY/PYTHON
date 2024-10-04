@@ -1,17 +1,16 @@
-def calcular_fatorial(n):
-    if n < 0:
-        return "Fatorial não é definido para números negativos"
-    elif n == 0 or n == 1:
-        return 1
-    else:
-        fatorial = 1
-        for i in range(2, n + 1):
-            fatorial *= i
-        return fatorial
+def calcular_fatorial(numero):
+    if numero < 0:
+        print('Fatorial indisponível para números negativos')
+    if numero == 0 or numero == 1:
+        return 1    
+    fatorial = 1
+    for i in range(1, numero + 1):
+        fatorial *= i
+    return fatorial    
 
-# Entrada do usuário
-numero = int(input("Digite o número que deseja saber o fatorial: "))
-
-# Chama a função e imprime o resultado
+numero = int(input('Digite um número: '))
 resultado = calcular_fatorial(numero)
-print(f"O fatorial de {numero} é {resultado}")
+
+print(f'O fatorial de {numero} é {resultado}')
+
+
