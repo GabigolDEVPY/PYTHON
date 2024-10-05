@@ -11,7 +11,7 @@ lista_de_listas_de_inteiros = [
     [4, 7, 6, 5, 2, 9, 2, 1, 2, 1],
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-]
+]-
 
 
 def return_first_duplicated(lista_inteiros):
@@ -32,3 +32,5 @@ for lista in lista_de_listas_de_inteiros:
         print(f'A lista {lista} não teve duplicados')
     else:
         print(f"Da, {lista} o número duplicado foi {numero_duplicado}")
+
+        
