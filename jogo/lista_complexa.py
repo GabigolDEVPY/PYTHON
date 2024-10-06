@@ -1,9 +1,30 @@
-dinheiro = 1000000
+import os
+import json
+import time
+from acertar_palavra import dinheiro_palavra
 
-lista_produtos = [
-    {"Carro": "Voyage", "Valor": "10000"},{"Carro": "Montana", "Valor": "9000"},{"Carro": "SallenS7", "Valor": "1000000"}
-    {"Carro": "Punto", "Valor": "12000"},{"Carro": "Cadete", "Valor": "8000"},{"Carro": "BMW", "Valor": "300000"}
-    {"Carro": "Golf", "Valor": "15000"},{"Carro": "Santana", "Valor": "12000"},{"Carro": "Jetta", "Valor": "150000"}
-    {"Carro": "Amarok", "Valor": "120000"},{"Carro": "Ferrari", "Valor": "1000000"},{"Carro": "JESKO", "Valor": "10000"}
-    {"Carro": "Civic", "Valor": "90000"},{"Carro": "Lamborghini", "Valor": "1200000"},{"Carro": "COROLA", "Valor": "10000"}
-]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ARQUIVO_PALAVRAS = os.path.join(BASE_DIR, 'lista_palavras.json')
+
+lista_palavras = ARQUIVO_PALAVRAS
+
+def carregar_lista():
+    try:
+        with open(lista_palavras, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        # Tratar a exceção de arquivo não encontrado aqui
+        pass
+
+meu_dinheiro = 0
+
+while True:
+    option = input(
+        f"Saldo na conta {meu_dinheiro}\n"
+        "Caça palavras[1] Sair[2] "
+        "Digite uma opção!: "
+        )
+
+    if option == "1":
+        os.system('cls')
+        meu_dinheiro += dinheiro_palavra()
