@@ -2,6 +2,7 @@ import os
 import json
 import time
 from acertar_palavra import dinheiro_palavra
+from shared import meu_dinheiro
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_PALAVRAS = os.path.join(BASE_DIR, 'lista_palavras.json')

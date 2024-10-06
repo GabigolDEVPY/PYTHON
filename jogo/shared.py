@@ -1,0 +1,1 @@
+meu_dinheiro = 0

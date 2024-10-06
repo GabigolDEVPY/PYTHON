@@ -2,14 +2,14 @@ import os
 import json
 import random
 import time
+from shared import meu_dinheiro
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_PALAVRAS = os.path.join(BASE_DIR, 'lista_palavras.json')
 lista_palavras = ARQUIVO_PALAVRAS
 
-def dinheiros(dinheiro_acumulado):
-    from lista_complexa import meu_dinheiro
-    print(f'Meu dinheiro {meu_dinheiro}         Dinheiro  {dinheiro_acumulado}')
+def dinheiros(dinheiro_acumulado, meu_dinheiro):
+    print(f'Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}')
 
 
 
@@ -39,7 +39,7 @@ def dinheiro_palavra():
             print(palavra_formada)
 
     while True:
-        dinheiros(dinheiro_acumulado)
+        dinheiros(dinheiro_acumulado, meu_dinheiro)
         sair = input('Deseja sair? [S]im [N]ão: ')
         os.system('cls')
         if sair == 's':
@@ -90,4 +90,3 @@ def dinheiro_palavra():
                 os.system('cls')
                 break
 
-dinheiro_palavra()
