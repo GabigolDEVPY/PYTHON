@@ -5,8 +5,13 @@ import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ARQUIVO_PALAVRAS = os.path.join(BASE_DIR, 'lista_palavras.json')
-
 lista_palavras = ARQUIVO_PALAVRAS
+
+def dinheiros(dinheiro_acumulado):
+    from lista_complexa import meu_dinheiro
+    print(f'Meu dinheiro {meu_dinheiro}         Dinheiro  {dinheiro_acumulado}')
+
+
 
 def carregar_lista():
     try:
@@ -20,7 +25,7 @@ def dinheiro_palavra():
     dinheiro_acumulado = 0
     def palavrazerada():
         if len(letras_acertadas) == 0:
-            print(f'Dinheiro {dinheiro_acumulado}')
+            dinheiros(dinheiro_acumulado, meu_dinheiro)
             print(palavra_e_dica["dica"])
             print()
             star = ''
@@ -34,7 +39,7 @@ def dinheiro_palavra():
             print(palavra_formada)
 
     while True:
-        print(f'Dinheiro {dinheiro_acumulado}')
+        dinheiros(dinheiro_acumulado)
         sair = input('Deseja sair? [S]im [N]ão: ')
         os.system('cls')
         if sair == 's':
@@ -85,3 +90,4 @@ def dinheiro_palavra():
                 os.system('cls')
                 break
 
+dinheiro_palavra()
