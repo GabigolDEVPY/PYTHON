@@ -1,4 +1,3 @@
-# acertar_palavra.py
 import os
 import json
 import random
