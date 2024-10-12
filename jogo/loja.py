@@ -34,4 +34,4 @@ def lojaa():
     else:
         print("Digite uma das opções acima!")
     
-lojaa()
+
