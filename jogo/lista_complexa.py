@@ -3,12 +3,14 @@ import os
 import json
 import time
 from acertar_palavra import dinheiro_palavra
-from shared import meu_dinheiro, salvar_dinheiro  # Corrigido para usar a variável correta
+from shared import meu_dinheiro, salvar_dinheiro, carregar_dinheiro, limpar  # Corrigido para usar a variável correta
 from loja import lojaa
 
 
 
 while True:
+    limpar()
+    meu_dinheiro = carregar_dinheiro()
     option = input(
         f"Saldo na conta: {meu_dinheiro}\n"
         "Caça palavras [1] Sair [2] Loja[3]\n"
@@ -16,16 +18,17 @@ while True:
     )
 
     if option == "1":
-        os.system('cls')
-        dinheiro_ganho = dinheiro_palavra()  # Recebe o dinheiro ganho do jogo
-        meu_dinheiro += dinheiro_ganho  # Atualiza a variável do dinheiro
-        salvar_dinheiro(meu_dinheiro)  # Salva o novo valor do dinheiro no arquivo
+        limpar()
+        dinheiro_palavra()  # Recebe o dinheiro ganho do jogo
+
+
     elif option == "2":
+        limpar()
         break
 
 
     elif option == "3":
-        os.system('cls')
+        limpar()
         loja = lojaa()
 
     else:

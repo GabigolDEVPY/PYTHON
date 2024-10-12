@@ -16,16 +16,16 @@ def dinheiro_palavra():
         os.system('cls')
         if sair.lower() == 's':
             salvar_dinheiro(meu_dinheiro + dinheiro_acumulado)  # Salva o dinheiro acumulado ao sair
-            return dinheiro_acumulado
+            break
         
         palavra_e_dica = random.choice(lista[0])
         letras_acertadas = ''
         tentativas = 0
-        palavra_secreta = palavra_e_dica["palavra"].lower()
+        palavra_secreta = palavra_e_dica["complemento"].lower()
 
         while True:
             if tentativas == 0:
-                print(palavra_e_dica["dica"])
+                print(palavra_e_dica["item"])
                 print("Palavra: " + " _ " * len(palavra_secreta))  # Exibe a palavra como traços
             letra = input('Digite uma letra: ')
             tentativas += 1
@@ -49,7 +49,7 @@ def dinheiro_palavra():
                     
             os.system('cls')
             dinheiros(dinheiro_acumulado)
-            print(palavra_e_dica["dica"])         
+            print(palavra_e_dica["item"])         
             print(palavra_formada)        
 
             if palavra_formada == palavra_secreta:

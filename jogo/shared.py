@@ -12,6 +12,8 @@ def carregar_lista():
             return json.load(f)
     except FileNotFoundError:
         pass
+def limpar():
+    os.system('cls')
 
 lista = carregar_lista()
 

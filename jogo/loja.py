@@ -1,16 +1,17 @@
 import os
 import json
-from shared import lista, meu_dinheiro, salvar_dinheiro
+from shared import lista, meu_dinheiro, salvar_dinheiro, carregar_dinheiro, limpar
 
 
 def iterar_lista(lista):
-        os.system('cls')
+        limpar()
         for i, item in enumerate(lista):
             print(f'{i}: {item['item']}       Valor: {item['complemento']}')
             print()
         comprar = input('Qual item deseja comprar [indice] ?: ')
 
 def lojaa():
+    meu_dinheiro = carregar_dinheiro()
     print(f'Meu dinheiro: {meu_dinheiro}')
     opcao = input('[1] Periféricos [2] Casas [3] Carros [4] sair\n'
             'Digite uma das opcoes acima: ')
@@ -28,7 +29,7 @@ def lojaa():
         iterar_lista(lista[2])
 
     elif opcao == '4':
-        os.system('cls')
+        limpar()
         return
 
     else:
