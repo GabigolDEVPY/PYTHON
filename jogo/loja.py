@@ -4,8 +4,9 @@ from shared import lista, meu_dinheiro, salvar_dinheiro
 
 
 def iterar_lista(lista):
+        os.system('cls')
         for i, item in enumerate(lista):
-            print(f'{i}: {item['Periférico']}       Valor: {item['valor']}')
+            print(f'{i}: {item['item']}       Valor: {item['complemento']}')
             print()
         comprar = input('Qual item deseja comprar [indice] ?: ')
 
@@ -18,28 +19,13 @@ def lojaa():
     
     elif opcao == '1':
         iterar_lista(lista[3])
-    #     os.system('cls')
-    #     listap = lista[3]
-    #     for i, item in enumerate(listap):
-    #         print(f'{i}: {item['Periférico']}       Valor: {item['valor']}')
-    #         print()
-    #         comprar = input('Qual item deseja comprar [indice] ?: ')
 
     elif opcao == '2':
-        os.system('cls')
-        listap = lista[1]
-        for i, item in enumerate(listap):
-            print(f'{i}: {item['Casa']}       Valor: {item['valor']}')
-            print()
-            comprar = input('Qual item deseja comprar [indice] ?: ')
+        iterar_lista(lista[1])
+
 
     elif opcao == '3':
-        os.system('cls')
-        listap = lista[2]
-        for i, item in enumerate(listap):
-            print(f'{i}: {item['Carro']}       Valor: {item['Valor']}')
-            print()
-            comprar = input('Qual item deseja comprar [indice] ?: ')
+        iterar_lista(lista[2])
 
     elif opcao == '4':
         os.system('cls')
@@ -48,4 +34,4 @@ def lojaa():
     else:
         print("Digite uma das opções acima!")
     
-
+lojaa()
