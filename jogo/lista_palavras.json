@@ -157,7 +157,7 @@
     {"Carro": "Golf", "Valor": "15000"},{"Carro": "Santana", "Valor": "12000"},{"Carro": "Jetta", "Valor": "150000"},
     {"Carro": "Amarok", "Valor": "120000"},{"Carro": "Ferrari", "Valor": "2000000"},{"Carro": "JESKO", "Valor": "1000000"},
     {"Carro": "Civic", "Valor": "90000"},{"Carro": "Lamborghini", "Valor": "1800000"},{"Carro": "COROLA", "Valor": "110000"}
-],[[
+],[
     {"Periférico": "Teclado mecânico", "valor": 400},
     {"Periférico": "Mouse gamer", "valor": 250},
     {"Periférico": "Monitor 24 polegadas", "valor": 1200},
@@ -209,5 +209,5 @@
     {"Periférico": "Mouse com fio", "valor": 80},
     {"Periférico": "Impressora multifuncional", "valor": 1200},
     {"Periférico": "Teclado com touchpad", "valor": 250}
-]]
+]
 ]

@@ -2,20 +2,10 @@ import os
 import json
 import random
 import time
-from shared import meu_dinheiro, salvar_dinheiro  # Usa a variável correta
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ARQUIVO_PALAVRAS = os.path.join(BASE_DIR, 'lista_palavras.json')
+from shared import meu_dinheiro, salvar_dinheiro, lista # Usa a variável correta
 
 def dinheiros(dinheiro_acumulado):
     print(f'Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}')
-
-def carregar_lista():
-    try:
-        with open(ARQUIVO_PALAVRAS, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        pass
 
 def dinheiro_palavra():
     dinheiro_acumulado = 0
@@ -28,7 +18,7 @@ def dinheiro_palavra():
             salvar_dinheiro(meu_dinheiro + dinheiro_acumulado)  # Salva o dinheiro acumulado ao sair
             return dinheiro_acumulado
         
-        palavra_e_dica = random.choice(carregar_lista()[0])
+        palavra_e_dica = random.choice(lista[0])
         letras_acertadas = ''
         tentativas = 0
         palavra_secreta = palavra_e_dica["palavra"].lower()
