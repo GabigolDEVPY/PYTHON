@@ -152,11 +152,21 @@
     {"item": "item com piso de madeira", "complemento": 500000},
     {"item": "item com dois banheiros", "complemento": 450000}
 ],[
-    {"item": "Voyage", "complemento": "10000"},{"item": "Montana", "complemento": "9000"},{"item": "SallenS7", "complemento": "1000000"},
-    {"item": "Punto", "complemento": "12000"},{"item": "Cadete", "complemento": "8000"},{"item": "BMW", "complemento": "300000"},
-    {"item": "Golf", "complemento": "15000"},{"item": "Santana", "complemento": "12000"},{"item": "Jetta", "complemento": "150000"},
-    {"item": "Amarok", "complemento": "120000"},{"item": "Ferrari", "complemento": "2000000"},{"item": "JESKO", "complemento": "1000000"},
-    {"item": "Civic", "complemento": "90000"},{"item": "Lamborghini", "complemento": "1800000"},{"item": "COROLA", "complemento": "110000"}
+    {"item": "Voyage", "complemento": 10000},
+    {"item": "Montana", "complemento": 9000},
+    {"item": "SallenS7", "complemento": 1000000},
+    {"item": "Punto", "complemento": 12000},
+    {"item": "Cadete", "complemento": 8000},
+    {"item": "BMW", "complemento": 300000},
+    {"item": "Golf", "complemento": 15000},
+    {"item": "Santana", "complemento": 12000},
+    {"item": "Jetta", "complemento": 150000},
+    {"item": "Amarok", "complemento": 120000},
+    {"item": "Ferrari", "complemento": 2000000},
+    {"item": "JESKO", "complemento": 1000000},
+    {"item": "Civic", "complemento": 90000},
+    {"item": "Lamborghini", "complemento": 1800000},
+    {"item": "COROLA", "complemento": 110000}
 ],[
     {"item": "Teclado mecânico", "complemento": 400},
     {"item": "Mouse gamer", "complemento": 250},
