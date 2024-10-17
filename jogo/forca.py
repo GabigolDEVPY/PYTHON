@@ -2,7 +2,7 @@ import os
 import json
 import random
 import time
-from shared import meu_dinheiro, salvar_dinheiro, lista, carregar_dinheiro # Usa a variável correta
+from shared import meu_dinheiro, salvar_dinheiro, lista, carregar_dados # Usa a variável correta
 
 def dinheiros(meu_dinheiro, dinheiro_acumulado):
     print(f'Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}')
