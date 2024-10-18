@@ -2,7 +2,7 @@ import os
 import json
 import random
 import time
-from shared import meu_dinheiro, salvar_dinheiro, lista, carregar_dados # Usa a variável correta
+from shared import dados, lista, carregar_dados, salvar_dados
 
 def dinheiros(meu_dinheiro, dinheiro_acumulado):
     print(f'Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}')
@@ -11,12 +11,12 @@ def dinheiro_palavra():
     dinheiro_acumulado = 0
     
     while True:
-        meu_dinheiro = carregar_dinheiro()
+        meu_dinheiro = dados["meu_dinheiro"]
         dinheiros(meu_dinheiro, dinheiro_acumulado)
         sair = input('Deseja sair? [S]im [N]ão: ')
         os.system('cls')
         if sair.lower() == 's':
-            salvar_dinheiro(meu_dinheiro + dinheiro_acumulado)  # Salva o dinheiro acumulado ao sair
+            salvar_dados(dados['meu_dinheiro'] + dinheiro_acumulado)  # Salva o dinheiro acumulado ao sair
             break
         
         palavra_e_dica = random.choice(lista[0])

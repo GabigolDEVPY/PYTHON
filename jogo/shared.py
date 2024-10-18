@@ -31,7 +31,7 @@ def carregar_dados():
 
 
 # Função genérica para salvar qualquer tipo de dado no arquivo JSON
-def salvar_dado(chave, valor):
+def salvar_dados(chave, valor):
     dados = carregar_dados()  # Carrega os dados atuais
     dados[chave] = valor      # Atualiza o valor da chave passada
     with open(DADOS, 'w') as f:
