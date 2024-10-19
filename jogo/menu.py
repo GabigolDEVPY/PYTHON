@@ -1,15 +1,17 @@
 import os
 import json
 import time
-from shared import dados, limpar
+from forca import dinheiro_palavra
+from shared import dados, limpar, carregar_dados, salvar_dados, lista
 from loja import lojaa
 
 def ver_inventario(itens):
     for i, item in enumerate(itens):
-        print(f'{i}: {item["item"]} - Valor: {item["Valor"]}')
+        print(f'{i}: {item["item"]} - Valor: {item["valor"]}')
     time.sleep(3)
 
 while True:
+    dados = carregar_dados()
     limpar()
     meu_dinheiro = dados["meu_dinheiro"]
     option = input(
@@ -28,7 +30,7 @@ while True:
 
     elif option == "3":
         limpar()
-        loja = lojaa()
+        lojaa()
     
     elif option == "2":
         limpar()

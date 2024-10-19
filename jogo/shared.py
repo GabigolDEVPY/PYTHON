@@ -27,17 +27,16 @@ def carregar_dados():
             return json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         # Se o arquivo não existir ou estiver corrompido, retorna o dicionário padrão
-        return {"meu_dinheiro": 10, "carros": [], "casas": [], "perifericos": [{"item": "Teclado", "Valor": "500"}]}
+        return {"meu_dinheiro": 0, "carros": [], "casas": [], "perifericos": []}
 
 
-# Função genérica para salvar qualquer tipo de dado no arquivo JSON
 def salvar_dados(chave, valor):
-    dados = carregar_dados()  # Carrega os dados atuais
-    dados[chave] = valor      # Atualiza o valor da chave passada
+    dados = carregar_dados()  
+    dados[chave] = valor     
     with open(DADOS, 'w') as f:
-        json.dump(dados, f, indent=4)  # Salva o dicionário atualizado
+        json.dump(dados, f, indent=4) 
 
-# Carrega os dados ao iniciar o programa
+
 dados = carregar_dados()
 
 def ver_inventario(itens):

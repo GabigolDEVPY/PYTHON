@@ -1,7 +1,7 @@
 import os
 import time
 import json
-from shared import lista, dados, limpar, ver_inventario
+from shared import dados, limpar, ver_inventario, salvar_dados, carregar_dados, lista
 
 def iterar_lista(lista, meu_dinheiro):
         while True:
@@ -15,12 +15,16 @@ def iterar_lista(lista, meu_dinheiro):
                         comprar_item = lista[comprar]["complemento"]
                         if meu_dinheiro >= comprar_item:
                             meu_dinheiro -= comprar_item
+                            comprar_item = int(lista[comprar]["complemento"])
+                            dados_comprar_atual.append(lista[comprar])
+                            print(dados)
+                            time.sleep(3)
                         else:
                             limpar()
                             print('Dinheiro insuficiente')
                             time.sleep(3)
                             break
-                        salvar_dinheiro(meu_dinheiro)
+                        salvar_dados("meu_dinheiro", meu_dinheiro)
                         break
             elif comprar.isalpha():
                 limpar()
@@ -37,18 +41,23 @@ def iterar_lista(lista, meu_dinheiro):
 def lojaa():
     while True:
         limpar()
+        dados = carregar_dados()
         meu_dinheiro = dados["meu_dinheiro"]
         print(f'Meu dinheiro: {meu_dinheiro}')
         opcao = input('[1]Sair___[2]Comprar___[3]Vender')
-        if opcao == '4':
+        if opcao == '1':
             break
         elif opcao == '2':
+            salvar_dados()
+            limpar()
             opcao = input('[1]Periféricos___[2]Casas___[3]Carros___[4]sair\n'
                     'Digite uma das opcoes acima: ')
             if opcao == '4':
                 return
             
             elif opcao == '1':
+                global dados_comprar_atual
+                dados_comprar_atual = dados["perifericos"]
                 iterar_lista(lista[3], meu_dinheiro)
 
             elif opcao == '2':
@@ -58,13 +67,10 @@ def lojaa():
             elif opcao == '3':
                 iterar_lista(lista[2], meu_dinheiro)
 
-            elif opcao == '4':
-                limpar()
-                break
-
             else:
                 print("Digite uma das opções acima!")
         elif opcao == "3":
+                    limpar()
                     escolha = input('SELECIONE O QUE DESEJA VER:\n'
                         "[1]Periféricos [2]Casas [3]Carros\nDigite uma opção: ")
                     
