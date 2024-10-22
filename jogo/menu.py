@@ -6,9 +6,13 @@ from shared import dados, limpar, carregar_dados, salvar_dados, lista
 from loja import lojaa
 
 def ver_inventario(itens):
+    limpar()
+    print("INVENTÁRIO")
+    print()
     for i, item in enumerate(itens):
         print(f'{i}: {item["item"]}  Valor - {item["complemento"]}')
-    time.sleep(3)
+    print()
+    continuar = input('[ENTER] para continuar')
 
 while True:
     dados = carregar_dados()
@@ -33,19 +37,29 @@ while True:
         lojaa()
     
     elif option == "2":
-        limpar()
-        escolha = input('SELECIONE O QUE DESEJA VER:\n'
-                        "[1]Periféricos [2]Casas [3]Carros\n"
-                        "Digite uma opção: ")
-        
-        if escolha == "1":
-            ver_inventario(dados["perifericos"])
-        elif escolha == "2":
-            ver_inventario(dados["casas"])
-        elif escolha == "3":
-            ver_inventario(dados["carros"])
-        else:
-            print('Opção inválida!')
+            while True:
+                limpar()
+                escolha = input('SELECIONE O QUE DESEJA VER:\n'
+                                "[1]Periféricos [2]Casas [3]Carros [4]Sair\n"
+                                "Digite uma opção: ")
+                
+                if escolha == "1":
+                    ver_inventario(dados["perifericos"])
+                elif escolha == "2":
+                    ver_inventario(dados["casas"])
+                elif escolha == "3":
+                    ver_inventario(dados["carros"])
+                elif escolha == "4":
+                    break
+
+
+                else:
+                    limpar()
+                    print('Digite uma das opções!')
+                    time.sleep(2)
+
     
     else:
+        limpar()
         print('Digite uma das opções')
+        time.sleep(2)
