@@ -30,9 +30,7 @@ def carregar_dados():
         return {"meu_dinheiro": 0, "carros": [], "casas": [], "perifericos": []}
 
 
-def salvar_dados(chave, valor):
-    dados = carregar_dados()  
-    dados[chave] = valor     
+def salvar_dados(dados):   
     with open(DADOS, 'w') as f:
         json.dump(dados, f, indent=4) 
 

@@ -1,11 +1,49 @@
 {
-    "meu_dinheiro": 58820,
-    "carros": [],
-    "casas": [],
+    "meu_dinheiro": 9995850000,
+    "carros": [
+        {
+            "item": "Lamborghini",
+            "complemento": 1800000
+        },
+        {
+            "item": "Jetta",
+            "complemento": 150000
+        }
+    ],
+    "casas": [
+        {
+            "item": "casa com piso de madeira",
+            "complemento": 500000
+        },
+        {
+            "item": "casa com vista para o mar",
+            "complemento": 2200000
+        }
+    ],
     "perifericos": [
         {
-            "item": "Teclado",
-            "Valor": "500"
+            "item": "Suporte de laptop",
+            "complemento": 150
+        },
+        {
+            "item": "Fone de ouvido sem fio",
+            "complemento": 500
+        },
+        {
+            "item": "Fone de ouvido sem fio",
+            "complemento": 500
+        },
+        {
+            "item": "Suporte de laptop",
+            "complemento": 150
+        },
+        {
+            "item": "Suporte de laptop",
+            "complemento": 150
+        },
+        {
+            "item": "Suporte de laptop",
+            "complemento": 150
         }
     ]
 }

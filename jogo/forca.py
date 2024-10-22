@@ -16,7 +16,8 @@ def dinheiro_palavra():
         sair = input('Deseja sair? [S]im [N]ão: ')
         os.system('cls')
         if sair.lower() == 's':
-            salvar_dados('meu_dinheiro', (meu_dinheiro + dinheiro_acumulado))  # Salva o dinheiro acumulado ao sair
+            dados["meu_dinheiro"] = meu_dinheiro + dinheiro_acumulado
+            salvar_dados(dados)  # Salva o dinheiro acumulado ao sair
             break
         
         palavra_e_dica = random.choice(lista[0])

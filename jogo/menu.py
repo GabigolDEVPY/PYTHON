@@ -7,7 +7,7 @@ from loja import lojaa
 
 def ver_inventario(itens):
     for i, item in enumerate(itens):
-        print(f'{i}: {item["item"]} - Valor: {item["valor"]}')
+        print(f'{i}: {item["item"]}  Valor - {item["complemento"]}')
     time.sleep(3)
 
 while True:
@@ -35,7 +35,8 @@ while True:
     elif option == "2":
         limpar()
         escolha = input('SELECIONE O QUE DESEJA VER:\n'
-                        "[1]Periféricos [2]Casas [3]Carros\nDigite uma opção: ")
+                        "[1]Periféricos [2]Casas [3]Carros\n"
+                        "Digite uma opção: ")
         
         if escolha == "1":
             ver_inventario(dados["perifericos"])
