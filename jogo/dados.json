@@ -1,5 +1,5 @@
 {
-    "meu_dinheiro": 9995860000,
+    "meu_dinheiro": 9995868800,
     "carros": [
         {
             "item": "Lamborghini",
@@ -44,6 +44,14 @@
         {
             "item": "Suporte de laptop",
             "complemento": 150
+        },
+        {
+            "item": "Roteador de jogos",
+            "complemento": 900
+        },
+        {
+            "item": "Mouse gamer RGB",
+            "complemento": 300
         }
     ]
 }
