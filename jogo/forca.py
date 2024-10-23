@@ -10,7 +10,7 @@ def dinheiros(meu_dinheiro, dinheiro_acumulado):
 
 def dinheiro_palavra():
     dinheiro_acumulado = 0
-    
+
     while True:
         meu_dinheiro = dados["meu_dinheiro"]
         dinheiros(meu_dinheiro, dinheiro_acumulado)
@@ -26,8 +26,10 @@ def dinheiro_palavra():
         tentativas = 0
         palavra_secreta = palavra_e_dica["complemento"].lower()
 
+        print(f"Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}\n"
+        "\n")
+
         while True:
-            dinheiros(meu_dinheiro, dinheiro_acumulado)
             if tentativas == 0:
                 print(palavra_e_dica["item"])
                 print("Palavra: " + " _ " * len(palavra_secreta))  # Exibe a palavra como traços
@@ -36,6 +38,7 @@ def dinheiro_palavra():
             
             if len(letra) > 1:
                 os.system('cls')
+                dinheiros(meu_dinheiro, dinheiro_acumulado)
                 print('Digite apenas uma letra!!')
                 continue
 
@@ -59,6 +62,7 @@ def dinheiro_palavra():
             if palavra_formada == palavra_secreta:
                 dinheiro_acumulado += 10000
                 os.system('cls')
+                dinheiros(meu_dinheiro, dinheiro_acumulado)
                 print(
                     'Você acertou a palavra secreta\n'
                     f'A palavra era {palavra_secreta}\n'

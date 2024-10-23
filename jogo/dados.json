@@ -1,6 +1,11 @@
 {
-    "meu_dinheiro": 0,
+    "meu_dinheiro": 39750,
     "carros": [],
     "casas": [],
-    "perifericos": []
+    "perifericos": [
+        {
+            "item": "Bateria externa",
+            "complemento": 250
+        }
+    ]
 }

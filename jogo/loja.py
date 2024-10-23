@@ -11,7 +11,7 @@ def vender(itens):
             time.sleep(2)
             return
         limpar()
-        print(f"MEU DINHEIRO {meu_dinheiro}\n" 
+        print(f"MEU DINHEIRO: {meu_dinheiro}\n" 
             "\n"
             "INVENTÁRIO:")
         print()
