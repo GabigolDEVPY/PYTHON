@@ -1,57 +1,11 @@
 {
-    "meu_dinheiro": 9995868800,
+    "meu_dinheiro": 19877670,
     "carros": [
         {
-            "item": "Lamborghini",
-            "complemento": 1800000
-        },
-        {
-            "item": "Jetta",
-            "complemento": 150000
+            "item": "Santana",
+            "complemento": 12000
         }
     ],
-    "casas": [
-        {
-            "item": "casa com piso de madeira",
-            "complemento": 500000
-        },
-        {
-            "item": "casa com vista para o mar",
-            "complemento": 2200000
-        }
-    ],
-    "perifericos": [
-        {
-            "item": "Suporte de laptop",
-            "complemento": 150
-        },
-        {
-            "item": "Fone de ouvido sem fio",
-            "complemento": 500
-        },
-        {
-            "item": "Fone de ouvido sem fio",
-            "complemento": 500
-        },
-        {
-            "item": "Suporte de laptop",
-            "complemento": 150
-        },
-        {
-            "item": "Suporte de laptop",
-            "complemento": 150
-        },
-        {
-            "item": "Suporte de laptop",
-            "complemento": 150
-        },
-        {
-            "item": "Roteador de jogos",
-            "complemento": 900
-        },
-        {
-            "item": "Mouse gamer RGB",
-            "complemento": 300
-        }
-    ]
+    "casas": [],
+    "perifericos": []
 }
