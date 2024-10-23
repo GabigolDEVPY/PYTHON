@@ -5,7 +5,8 @@ import time
 from shared import dados, lista, carregar_dados, salvar_dados
 
 def dinheiros(meu_dinheiro, dinheiro_acumulado):
-    print(f'Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}')
+    print(f"Meu dinheiro: {meu_dinheiro}         Dinheiro Acumulado: {dinheiro_acumulado}\n"
+        "\n ")
 
 def dinheiro_palavra():
     dinheiro_acumulado = 0
@@ -26,6 +27,7 @@ def dinheiro_palavra():
         palavra_secreta = palavra_e_dica["complemento"].lower()
 
         while True:
+            dinheiros(meu_dinheiro, dinheiro_acumulado)
             if tentativas == 0:
                 print(palavra_e_dica["item"])
                 print("Palavra: " + " _ " * len(palavra_secreta))  # Exibe a palavra como traços

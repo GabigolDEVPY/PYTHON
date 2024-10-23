@@ -1,11 +1,6 @@
 {
-    "meu_dinheiro": 19877670,
-    "carros": [
-        {
-            "item": "Santana",
-            "complemento": 12000
-        }
-    ],
+    "meu_dinheiro": 0,
+    "carros": [],
     "casas": [],
     "perifericos": []
 }
