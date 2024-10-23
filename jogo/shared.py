@@ -29,11 +29,9 @@ def carregar_dados():
         # Se o arquivo não existir ou estiver corrompido, retorna o dicionário padrão
         return {"meu_dinheiro": 0, "carros": [], "casas": [], "perifericos": []}
 
-
 def salvar_dados(dados):   
     with open(DADOS, 'w') as f:
         json.dump(dados, f, indent=4) 
-
 
 dados = carregar_dados()
 

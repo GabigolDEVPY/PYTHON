@@ -21,7 +21,6 @@ def ver_inventario(itens):
         print()
         continuar = input('PRESSIONE [ENTER] CONTINUAR: ')
 
-
 while True:
     dados = carregar_dados()
     limpar()
@@ -66,6 +65,7 @@ while True:
                     limpar()
                     print('Digite uma das opções!')
                     time.sleep(2)
+                    
     else:
         limpar()
         print('Digite uma das opções')

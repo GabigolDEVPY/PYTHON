@@ -3,7 +3,6 @@ import time
 import json
 from shared import dados, limpar, ver_inventario, salvar_dados, carregar_dados, lista
 
-
 def vender(itens):
         if len(itens) == 0:
             limpar()
@@ -33,9 +32,6 @@ def vender(itens):
         dados["meu_dinheiro"] = meu_dinheiro + item["complemento"]
         del dados[dados_vender_atual][0]
         salvar_dados(dados)
-
-
-
 
 def iterar_lista(lista, meu_dinheiro):
         while True:
@@ -74,8 +70,6 @@ def iterar_lista(lista, meu_dinheiro):
                 print('Digite algo válido')
                 time.sleep(3)
 
-
-
 def lojaa():
     while True:
         limpar()
@@ -112,10 +106,8 @@ def lojaa():
                 dados_comprar_atual = "carros"
                 iterar_lista(lista[2], meu_dinheiro)
 
-
             else:
                 print("Digite uma das opções acima!")
-
         elif opcao == "3":
                     while True:
                         dados = carregar_dados()
@@ -142,12 +134,9 @@ def lojaa():
                             limpar()
                             print('Digite uma das opções!')
                             time.sleep(2)
-
-                    
         else:
             limpar()
             print('Digite uma das opções')
             time.sleep(3)      
-    
 
 
