@@ -14,4 +14,3 @@ while senha != senha_salva:
 print(repeticoes)
 
 
-12
