@@ -1,5 +1,6 @@
 from game_strength import game_forca
 from load import save_file, load_list_scores_lifes, list
+from shop import loja
 
 
 while True:
@@ -10,7 +11,11 @@ while True:
 
     if option == "2":
         game_forca(list)
+
     elif option == "3":
         break
+
+    elif option == "1":
+        loja()
 
     

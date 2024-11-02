@@ -1,23 +1,38 @@
-from load import save_file, load_list_scores_lifes
+from load import save_file, load_list_scores_lifes, clear
 
 def loja():
     while True:
-        data = load_list_scores_lifes
-        option = int(input(
-            "1 LIFE = 10000"
-            "2 LIFE = 20000"
-            "3 LIFE = 30000"
-            "4 LIFE = 40000"
-            "5 LIFE = 50000"
-            "6 LIFE = 60000"
-        ))
-        if len(option) >1:
-            print("Type just one digit")
-        valid = "1,2,3,4,5,6"
+        clear()
+        data = load_list_scores_lifes()
+        print(f"SCORE: {data["scores"]}  LIFES: {data["lifes"]}"
+            "\n"
+            )
+        valid = [0,1,2,3,4,5]
+        itens = [
+            {"LIFE": 1,  "Valor": 10000},
+            {"LIFE": 2,  "Valor": 20000},
+            {"LIFE": 3,  "Valor": 30000},
+            {"LIFE": 4,  "Valor": 40000},
+            {"LIFE": 5,  "Valor": 50000},
+            {"LIFE": 6,  "Valor": 60000}
+        ]
 
-        if option not in valid:
+        for lista in itens:
+            print(f"LIFE: {lista["LIFE"]} COST: {lista["Valor"]}")  
+        option = int(input("[7]SAIR or number of BUY: ")) -1
+
+        if option == 6:
+            break
+
+        elif option not in valid:
             print('Option invalid, type try')
+            continue
+        else:
+            if data["scores"] >= itens[option]["Valor"]:
+                data["lifes"] += itens[option]["LIFE"]
+                data["scores"] -= itens[option]["Valor"]
+                save_file(data)
+            else:
+                print('Dinheiro insuficiente')    
 
-        data["lifes"] += option    
-    
-    
+        
