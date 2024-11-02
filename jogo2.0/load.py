@@ -22,10 +22,7 @@ def load_list_scores_lifes():
         with open(list_scores_lifes, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
-        return [
-    {"scores": 0},
-    {"lifes" : 0}
-]
+        return {"scores": 0, "lifes": 0}
 
 def save_file():
     with open(list_scores_lifes, "w") as f:
@@ -33,5 +30,7 @@ def save_file():
 
 list = load_list()
 data = load_list_scores_lifes()
+
+
 
 

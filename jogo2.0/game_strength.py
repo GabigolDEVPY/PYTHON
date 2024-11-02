@@ -45,6 +45,6 @@ def game_forca(list):
                 print(formed_word)
 
 
-game_forca(list)
+
 
 
