@@ -1,11 +1,15 @@
 import random
-from load import list, clear
+from load import list, clear, load_list_scores_lifes, save_file
 
 def game_forca(list):
     while True:
-        option = input("[1]Play [2]Exit [3]Use-life: ")
+        data = load_list_scores_lifes()
 
-        if option == "1":
+        option = input("[1]Play [2]Exit [3]Use-life: ")
+        if option == "2":
+            break
+
+        elif option == "1":
             word_selected = random.choice(list)
             secret_word = word_selected["complemento"]
             tip = word_selected["item"]
@@ -19,6 +23,8 @@ def game_forca(list):
                     else:
                         formed_word += " _ "
                 if formed_word == secret_word:
+                    data["scores"] += 10000
+                    save_file(data)
                     clear()
                     print('Congragulations, You Win!!!')
                     next = input('Press any button to continue')

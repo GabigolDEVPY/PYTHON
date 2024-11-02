@@ -24,7 +24,7 @@ def load_list_scores_lifes():
     except FileNotFoundError:
         return {"scores": 0, "lifes": 0}
 
-def save_file():
+def save_file(data):
     with open(list_scores_lifes, "w") as f:
         json.dump(data, f)
 
