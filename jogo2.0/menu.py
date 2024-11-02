@@ -1,9 +1,10 @@
 from game_strength import game_forca
-from load import save_file, load_list_scores_lifes, list
+from load import save_file, load_list_scores_lifes, list, clear
 from shop import loja
 
 
 while True:
+    clear()
     data = load_list_scores_lifes()
     print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
         "\n")
