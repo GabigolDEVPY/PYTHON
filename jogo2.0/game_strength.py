@@ -9,8 +9,9 @@ def game_forca(list):
         print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
         "\n")
 
-        option = input("[1]Play [2]Exit [3]Use-life: ")
+        option = input("[1]Play [2]Exit: ")
         if option == "2":
+            save_file(data)
             break
 
         elif option == "1":
@@ -22,6 +23,7 @@ def game_forca(list):
 
             while True:
                 if lifes == 0:
+                    save_file(data)
                     clear()
                     print('You Defeat')
                     time.sleep(3)
@@ -44,13 +46,25 @@ def game_forca(list):
                 print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
                 "\n")
                 print(
-                    f"TIP :{tip} LIFES{lifes}\n"
+                    f"TIP :{tip} LIFES: {lifes}\n"
                     f"{formed_word}"
                     )
                 
-                letter = input("[1]Exit type a letter: ")
+                letter = input("[2]Use life [1]Exit type a letter: ")
                 if letter == "1":
+                    save_file(data)
                     break
+                if letter == '2':
+                    if data['lifes'] == 0:
+                        print("\n"
+                            'you not have lifes'.upper()
+                            )
+                        time.sleep(3)
+                        continue
+                    else:
+                        data["lifes"] -= 1
+                        lifes += 1
+                        continue
 
                 if len(letter) >1:
                     print('type just one letter')
