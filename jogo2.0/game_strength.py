@@ -16,7 +16,7 @@ def game_forca(list):
 
         elif option == "1":
             word_selected = random.choice(list)
-            secret_word = word_selected["complemento"]
+            secret_word = (word_selected["complemento"]).lower()
             tip = word_selected["item"]
             correct_letters = ''
             lifes = 10
