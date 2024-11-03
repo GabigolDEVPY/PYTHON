@@ -9,6 +9,7 @@ Base_directory = os.path.dirname(os.path.abspath(__file__))
 
 list_dict = os.path.join(Base_directory, "words.json")
 list_scores_lifes = os.path.join(Base_directory, "data.json")
+desenho_local = os.path.join(Base_directory, "desenho.py")
 
 def load_list():
     try:
@@ -30,6 +31,9 @@ def save_file(data):
 
 list = load_list()
 data = load_list_scores_lifes()
+
+
+
 
 
 

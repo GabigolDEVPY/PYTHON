@@ -1,5 +1,6 @@
 import random
 import time
+from desenho import stages, op_print
 from load import list, clear, load_list_scores_lifes, save_file
 
 def game_forca(list):
@@ -47,7 +48,16 @@ def game_forca(list):
                 "\n")
                 print(
                     f"TIP :{tip} LIFES: {lifes}\n"
+                    "\n"
+                    "\n"
+                )
+                op_print(lifes)
+                print(
+                    "\n"
+                    "\n"
                     f"{formed_word}"
+                    "\n"
+                    "\n"
                     )
                 
                 letter = input("[2]Use life [1]Exit type a letter: ")
