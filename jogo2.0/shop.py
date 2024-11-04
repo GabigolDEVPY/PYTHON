@@ -19,7 +19,8 @@ def loja():
         ]
 
         for lista in itens:
-            print(f"LIFE: {lista["LIFE"]} COST: {lista["Valor"]}")  
+            print(f"LIFE: {lista["LIFE"]} COST: {lista["Valor"]}")
+        print()      
         option = int(input("[7]EXIT OR NUMBER OF BUY: ")) -1
 
         if option == 6:
