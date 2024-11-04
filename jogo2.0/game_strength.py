@@ -7,7 +7,7 @@ def game_forca(list):
     while True:
         clear()
         data = load_list_scores_lifes()
-        print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
+        print(f"SCORE: {data["scores"]}     LIFES: {data["lifes"]}"
         "\n")
 
         option = input("[1]PLAY [2]EXIT: ")
@@ -56,7 +56,7 @@ def game_forca(list):
                     clear()
                     break        
                 clear()
-                print(f"SCORE: {data["scores"]}                        LIFES: {data["lifes"]}"
+                print(f"SCORE: {data["scores"]}                              LIFES: {data["lifes"]}"
                 "\n")
                 print(
                     f"TIP :{tip} LIFES: {lifes}     WORDS TYPED: {words_typed}\n"
