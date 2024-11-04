@@ -30,6 +30,7 @@ def loja():
 
             elif option not in valid:
                 print('OPTION INVALID, TYPE TRY')
+                time.sleep(3)
                 continue
             else:
                 if data["scores"] >= itens[option]["Valor"]:
