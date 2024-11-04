@@ -10,7 +10,7 @@ def game_forca(list):
         print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
         "\n")
 
-        option = input("[1]Play [2]Exit: ")
+        option = input("[1]PLAY [2]EXIT: ")
         if option == "2":
             save_file(data)
             break
@@ -21,12 +21,13 @@ def game_forca(list):
             tip = word_selected["item"]
             correct_letters = ''
             lifes = 10
+            words_typed = ''
 
             while True:
                 if lifes == 0:
                     save_file(data)
                     clear()
-                    print('You Defeat')
+                    print('GAME OVER')
                     time.sleep(3)
                     break
                 formed_word = ''
@@ -39,15 +40,26 @@ def game_forca(list):
                     data["scores"] += 10000
                     save_file(data)
                     clear()
-                    print('Congragulations, You Win!!!')
-                    next = input('Press any button to continue')
+                    print("           .-\"\"\"\"\"\"-.")
+                    print("         .'            '.")
+                    print("        /   O      O     \\")
+                    print("       :           `      :")
+                    print("       |    \\       /    |")
+                    print("       |     .-----.'     |")
+                    print("       |    /       \\    |  CONGRATULATIONS,")
+                    print("       :   |         |   :   YOU WIN!!!")
+                    print("        \\   \\       /   /")
+                    print("         '.  '.___.'  .'")
+                    print("           '-.......-'")
+
+                    next = input('PRESS ANY BUTTON TO CONTINUE')
                     clear()
                     break        
                 clear()
                 print(f"SCORE: {data["scores"]}                        LIFES: {data["lifes"]}"
                 "\n")
                 print(
-                    f"TIP :{tip} LIFES: {lifes}     CORRECT LETTERS: {correct_letters}\n"
+                    f"TIP :{tip} LIFES: {lifes}     WORDS TYPED: {words_typed}\n"
                     "\n"
                     "\n"
                 )
@@ -57,14 +69,14 @@ def game_forca(list):
                 "\n"
                 )
 
-                letter = input("[2]Use life [1]Exit type a letter: ")
+                letter = input("[2]USE LIFE [1]EXIT TYPE A LETTER: ")
                 if letter == "1":
                     save_file(data)
                     break
                 if letter == '2':
                     if data['lifes'] == 0:
                         print("\n"
-                            'you not have lifes'.upper()
+                            'YOU DO NOT HAVE LIVES'
                             )
                         time.sleep(3)
                         continue
@@ -72,10 +84,17 @@ def game_forca(list):
                         data["lifes"] -= 1
                         lifes += 1
                         continue
-
                 if len(letter) >1:
-                    print('type just one letter')
+                    print('TYPE JUST ONE LETTER')
                     continue
+
+                if letter in words_typed:
+                    print("\n"
+                        'LETTER ALREADY TYPED')
+                    time.sleep(3)
+                    continue
+                words_typed += letter
+
 
                 if letter in secret_word:
                     correct_letters += letter

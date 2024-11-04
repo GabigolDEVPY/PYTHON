@@ -1,3 +1,4 @@
+import time
 from load import save_file, load_list_scores_lifes, clear
 
 def loja():
@@ -19,13 +20,13 @@ def loja():
 
         for lista in itens:
             print(f"LIFE: {lista["LIFE"]} COST: {lista["Valor"]}")  
-        option = int(input("[7]SAIR or number of BUY: ")) -1
+        option = int(input("[7]EXIT OR NUMBER OF BUY: ")) -1
 
         if option == 6:
             break
 
         elif option not in valid:
-            print('Option invalid, type try')
+            print('OPTION INVALID, TYPE TRY')
             continue
         else:
             if data["scores"] >= itens[option]["Valor"]:
@@ -33,6 +34,8 @@ def loja():
                 data["scores"] -= itens[option]["Valor"]
                 save_file(data)
             else:
-                print('Dinheiro insuficiente')    
+                print("\n"
+                    'INSUFFICIENT FUNDS')
+                time.sleep(3)
 
         

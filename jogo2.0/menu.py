@@ -8,7 +8,7 @@ while True:
     data = load_list_scores_lifes()
     print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
         "\n")
-    option = input('[1]Shop [2]Strength [3]Exit: ')
+    option = input('[1]SHOP [2]STRENGTH [3]EXIT: ')
 
     if option == "2":
         game_forca(list)
