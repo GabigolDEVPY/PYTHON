@@ -74,6 +74,10 @@ def game_forca(list):
                     save_file(data)
                     break
                 if letter == '2':
+                    if lifes == 10:
+                        print('FULL LIFE')
+                        time.sleep(2)
+                        continue
                     if data['lifes'] == 0:
                         print("\n"
                             'YOU DO NOT HAVE LIVES'
@@ -84,17 +88,21 @@ def game_forca(list):
                         data["lifes"] -= 1
                         lifes += 1
                         continue
-                if len(letter) >1:
-                    print('TYPE JUST ONE LETTER')
-                    continue
 
-                if letter in words_typed:
-                    print("\n"
-                        'LETTER ALREADY TYPED')
-                    time.sleep(3)
+                if letter.isalpha():
+                    if len(letter) >1:
+                        print('TYPE JUST ONE LETTER')
+                        continue
+                    if letter in words_typed:
+                        print("\n"
+                            'LETTER ALREADY TYPED')
+                        time.sleep(3)
+                        continue
+                    words_typed += letter
+                else:
+                    print("TYPE ONLY WORDS")
+                    time.sleep(2)
                     continue
-                words_typed += letter
-
 
                 if letter in secret_word:
                     correct_letters += letter

@@ -110,5 +110,7 @@ def op_print(lifes, formed):
         print(f"{stages[7]}             {formed}")
     elif lifes == 2:
         print(f"{stages[8]}             {formed}")
-    else: 
+
+    elif lifes == 1:
         print(f"{stages[9]}             {formed}")
+

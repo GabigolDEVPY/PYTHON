@@ -1,6 +1,7 @@
 from game_strength import game_forca
 from load import save_file, load_list_scores_lifes, list, clear
 from shop import loja
+import time
 
 
 while True:
@@ -18,5 +19,9 @@ while True:
 
     elif option == "1":
         loja()
+
+    else:
+        print('TYPE VALID OPTION')
+        time.sleep(3)    
 
     

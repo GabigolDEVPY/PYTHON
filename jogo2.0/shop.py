@@ -21,22 +21,27 @@ def loja():
         for lista in itens:
             print(f"LIFE: {lista["LIFE"]} COST: {lista["Valor"]}")
         print()      
-        option = int(input("[7]EXIT OR NUMBER OF BUY: ")) -1
+        option = input("[7]EXIT OR NUMBER OF BUY: ")
 
-        if option == 6:
-            break
+        if option.isdigit():
+            option = int(option) -1
+            if option == 6:
+                break
 
-        elif option not in valid:
-            print('OPTION INVALID, TYPE TRY')
-            continue
-        else:
-            if data["scores"] >= itens[option]["Valor"]:
-                data["lifes"] += itens[option]["LIFE"]
-                data["scores"] -= itens[option]["Valor"]
-                save_file(data)
+            elif option not in valid:
+                print('OPTION INVALID, TYPE TRY')
+                continue
             else:
-                print("\n"
-                    'INSUFFICIENT FUNDS')
-                time.sleep(3)
+                if data["scores"] >= itens[option]["Valor"]:
+                    data["lifes"] += itens[option]["LIFE"]
+                    data["scores"] -= itens[option]["Valor"]
+                    save_file(data)
+                else:
+                    print("\n"
+                        'INSUFFICIENT FUNDS')
+                    time.sleep(3)
+        else:
+            print('TYPE ONLY NUMBERS')
+            time.sleep(3)            
 
         
