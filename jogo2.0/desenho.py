@@ -1,114 +1,114 @@
 stages = [
     """
-      +---+
-      |   |
-          |
-          |
-          |
-          |
+          +---+
+          |   |
+          |   
+          |   
+          |   
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-          |
-          |
-          |
+          +---+
+          |   |
+          |   O
+          |   
+          |   
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-      |   |
-          |
-          |
+          +---+
+          |   |
+          |   O
+          |   |
+          |   
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|   |
-          |
-          |
+          +---+
+          |   |
+          |   O
+          |  /|
+          |   
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|\\  |
-          |
-          |
+          +---+
+          |   |
+          |   O
+          |  /|\\
+          |   
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|\\  |
-     /    |
-          |
+          +---+
+          |   |
+          |   O
+          |  /|\\
+          |  / 
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|\\  |
-     / \\  |
-          |
+          +---+
+          |   |
+          |   O
+          |  /|\\
+          |  / \\
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|\\  |
-     / \\  |
-          |
+          +---+
+          |   |
+          |   X
+          |  /|\\
+          |  / \\
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      X   |
-     /|\\  |
-     / \\  |
-          |
+          +---+
+          |   |
+          |  (O)
+          |  /|\\
+          |  / \\
+          |   
     =========
     """,
     """
-      +---+
-      |   |
-      O   |
-     /|\\  |
-     / \\  |
-          |
+          +---+
+          |   |
+          |   O
+          |  /|\\
+          |  / \\
+         _|_   
     =========
     """
 ]
 
-def op_print(lifes):
+def op_print(lifes, formed):
     if lifes == 10:
-        print(stages[0])
+        print(f"{stages[0]}             {formed}")
     elif lifes == 9:
-        print(stages[1])
+        print(f"{stages[1]}             {formed}")
     elif lifes == 8:
-        print(stages[2])
+        print(f"{stages[2]}             {formed}")
     elif lifes == 7:
-        print(stages[3])
+        print(f"{stages[3]}             {formed}")
     elif lifes == 6:
-        print(stages[4])
+        print(f"{stages[4]}             {formed}")
     elif lifes == 5:
-        print(stages[5])
+        print(f"{stages[5]}             {formed}")
     elif lifes == 4:
-        print(stages[6])
+        print(f"{stages[6]}             {formed}")
     elif lifes == 3:
-        print(stages[7])
+        print(f"{stages[7]}             {formed}")
     elif lifes == 2:
-        print(stages[8])
+        print(f"{stages[8]}             {formed}")
     else: 
-        print(stages[9])
+        print(f"{stages[9]}             {formed}")

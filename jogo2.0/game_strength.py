@@ -44,22 +44,19 @@ def game_forca(list):
                     clear()
                     break        
                 clear()
-                print(f"SCORE: {data["scores"]}              LIFES: {data["lifes"]}"
+                print(f"SCORE: {data["scores"]}                        LIFES: {data["lifes"]}"
                 "\n")
                 print(
-                    f"TIP :{tip} LIFES: {lifes}\n"
+                    f"TIP :{tip} LIFES: {lifes}     CORRECT LETTERS: {correct_letters}\n"
                     "\n"
                     "\n"
                 )
-                op_print(lifes)
+                op_print(lifes, formed_word)
                 print(
-                    "\n"
-                    "\n"
-                    f"{formed_word}"
-                    "\n"
-                    "\n"
-                    )
-                
+                "\n"
+                "\n"
+                )
+
                 letter = input("[2]Use life [1]Exit type a letter: ")
                 if letter == "1":
                     save_file(data)
