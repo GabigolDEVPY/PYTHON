@@ -30,5 +30,8 @@ print(file_loaded)
 
 new_list = [num * 2 if num % 2 == 0 else num * 2 / 20 + 2 for num in file_loaded]
 
-savee = save_file(new_list)
-print(new_list)
+option = input("[1]save for save list in a file")
+
+if option == "1":
+    savee = save_file(new_list)
+    print(new_list)

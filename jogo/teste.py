@@ -30,4 +30,5 @@ def save_file(FILE):
         json.dump(FILE, f)  # Aqui você deve passar a variável FILE
 
 # Salvar a lista carregada de volta no arquivo
+
 save_file(list_load)
