@@ -51,3 +51,6 @@ def cadastrar_usuario(*args, **kwargs):
 dados_usuario = {'endereco': 'Rua 123', 'email': 'gabriel@exemplo.com'}
 
 cadastrar_usuario("Gabriel", 25, **dados_usuario)
+
+
+# todos os exemplos de args e Kwargs
