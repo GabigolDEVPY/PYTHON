@@ -5,18 +5,19 @@ Base_dir = os.path.dirname(__file__)
 data = os.path.join(Base_dir, "data.json")
 
 
-def load_data():
+def load_data(data):
     try:
         with open(data, "r") as data:
             return json.load(data)
     except (FileExistsError, FileNotFoundError):
         return []
     
-def save_file(file):
+def save_file(file, x):
     try:
-        with open(data, "w") as f:
-            return json.dump(file, data, indent=3)   
+        with open(x, "w") as f:
+            return json.dump(file, f)   
     except Exception:
         print('Error to save file')
+        return []
 
 

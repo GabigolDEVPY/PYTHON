@@ -1,6 +1,6 @@
 import os
 import time
-
+from packagess import functions as ft
 
 def select_option():
         print("[1] register [2] delete [3] search [4] cancel"
@@ -21,8 +21,10 @@ def select_option():
 
 def interact_display(x):
     if x == 1:
-        print("cadastrar")
-        time.sleep(4)
+        ft.register_user()
+    elif x == 2:
+        ft.delete_user()
+
 
 
 
