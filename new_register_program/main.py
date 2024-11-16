@@ -27,6 +27,10 @@ def interact_display(x):
     elif x == 2:
         os.system("cls")
         ft.delete_user()
+    elif x == 3:
+        os.system("cls")
+        ft.search_user()
+
 
 
 

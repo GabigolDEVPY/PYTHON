@@ -50,4 +50,17 @@ def delete_user():
         del users[option]
         bd.save_file(users, bd.data)
         print(users)
-        time.sleep(4)        
+        time.sleep(4)
+
+def search_user():
+        users = bd.load_data(bd.data)
+        option = input('enter the name of the user you want to find: ')
+        encontred_users = 0
+        for i, user in enumerate(users):
+                if user["name"][:3] == option[:3]:
+                        print(f"{i+1}: {user["name"]}")
+                        encontred_users += 1
+        if encontred_users == 0:
+                print("No users were found")                
+        is_continue = input('Press ENTER to coninue: ')                
+
