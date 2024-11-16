@@ -3,6 +3,7 @@ import time
 from packagess import functions as ft
 
 def select_option():
+        os.system("cls")
         print("[1] register [2] delete [3] search [4] cancel"
             "\n"
             "\n"
@@ -21,8 +22,10 @@ def select_option():
 
 def interact_display(x):
     if x == 1:
+        os.system("cls")
         ft.register_user()
     elif x == 2:
+        os.system("cls")
         ft.delete_user()
 
 
