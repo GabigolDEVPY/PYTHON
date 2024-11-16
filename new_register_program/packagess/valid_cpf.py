@@ -4,10 +4,11 @@ import time
 def verify(list_users):
     while True:
         cpf = input('Type cpf number: ')
-        cpf_valido = ''
+        cpf_valid = ''
         for digit in cpf:
             if digit.isdigit():
-                cpf_valido += digit
+                cpf_valid += digit
+        cpf = cpf_valid        
 
         if cpf.isdigit():
                 if len(str(cpf)) != 11:
@@ -22,9 +23,7 @@ def verify(list_users):
         if users:
             for user in users:
                 if user["cpf"] == cpf:
-                    print('This user is already registered')
-                    time.sleep(2)
-                    return
+                    return 1
 
         first_digit = cpf[:9]
         accountant = 10
@@ -33,7 +32,7 @@ def verify(list_users):
             digit_1 += int(digit) * accountant
             accountant -= 1
         digit_1 = (digit_1 * 10) % 11
-        digit_1 = digit_1 if digit_1 < 9 else 0
+        digit_1 = digit_1 if digit_1 <= 9 else 0
 
         second_digit = cpf[:10]
         accountant = 11
@@ -42,10 +41,11 @@ def verify(list_users):
             digit_2 += int(digit) * accountant
             accountant -= 1
         digit_2 = (digit_2 * 10) % 11
-        digit_2 = digit_2 if digit_2 < 9 else 0
+        digit_2 = digit_2 if digit_2 <= 9 else 0
 
         new_cpf = (f"{first_digit}{digit_1}{digit_2}")
-
+        print(new_cpf)
+        time.sleep(3)
         if new_cpf != cpf:
             os.system("cls")
             print("CPF inválido")
