@@ -4,13 +4,14 @@ import base_directory as bd
 from packagess import valid_cpf as ac
 
 
+        
 
 def register_user():
         while True:
                 users = bd.load_data(bd.data)
                 name = input("Type client name: ")
                 os.system("cls")
-                age = input("Type idade client: ")
+                age = input("Type client age: ")
                 os.system("cls")
                 number = input("Type client number: ")
                 os.system("cls")
@@ -46,10 +47,11 @@ def delete_user():
                 )
                 print()
 
-        option = int(input('Type indice the want user delete')) - 1
+        option = int(input('[0]Sair ,Type indice the want user delete: ')) - 1
+        if option == -1:
+                return
         del users[option]
         bd.save_file(users, bd.data)
-        print(users)
         time.sleep(4)
 
 def search_user():

@@ -44,8 +44,7 @@ def verify(list_users):
         digit_2 = digit_2 if digit_2 <= 9 else 0
 
         new_cpf = (f"{first_digit}{digit_1}{digit_2}")
-        print(new_cpf)
-        time.sleep(3)
+
         if new_cpf != cpf:
             os.system("cls")
             print("CPF inválido")

@@ -4,7 +4,7 @@ from packagess import functions as ft
 
 def select_option():
         os.system("cls")
-        print("[1] register [2] delete [3] search [4] cancel"
+        print("[1] register [2] delete [3] search [4] Exit"
             "\n"
             "\n"
             "\n")
@@ -35,7 +35,10 @@ def interact_display(x):
 
 
 
+
 while True:
     value = select_option()
+    if value == 4:
+        break
     interact_display(value)
 
