@@ -18,8 +18,6 @@ def select_option():
             time.sleep(3)
 
 
-
-
 def interact_display(x):
     if x == 1:
         os.system("cls")
@@ -30,10 +28,6 @@ def interact_display(x):
     elif x == 3:
         os.system("cls")
         ft.search_user()
-
-
-
-#comentário
 
 
 while True:
