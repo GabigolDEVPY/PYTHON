@@ -52,7 +52,6 @@ def delete_user():
                 return
         del users[option]
         bd.save_file(users, bd.data)
-        time.sleep(4)
 
 def search_user():
         users = bd.load_data(bd.data)
