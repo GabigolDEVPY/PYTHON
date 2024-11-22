@@ -1,7 +1,8 @@
 import os
 import time
 import base_directory as bd
-from packagess import valid_cpf as ac
+from packagess import valid_cpf as ac, generate_ID as gen
+
 
 
         
@@ -21,7 +22,9 @@ def register_user():
                         time.sleep(3)
                         break
 
-                user = {"name": name,
+                user = {
+                        "ID": gen.gen_ID(),
+                        "name": name,
                         "idade": age,
                         "number": number,
                         "cpf": cpf
@@ -41,8 +44,24 @@ def delete_user():
                 print('Empty list')
                 time.sleep(3)
                 return
+        option = input("[1] Delete for indice [2] Delete by ID: ")
+        if option == "2":
+                os.system("cls")
+                id_user = input("Enter the client ID: ")
+                interact = 0
+                for user in users:
+                        if user["ID"] == id_user:
+                                del users[interact]
+                                bd.save_file(users, bd.data)
+                                return
+                        else:
+                                interact += 1
+                                
+                print('Cliente not found')                
+                return
+        os.system("cls")
         for i, user in enumerate(users):
-                print(f"{i+1}: NAME: {user["name"]}\n"
+                print(f"{i+1}: NAME: {user["name"]} ID: {user["ID"]}\n"
                 f"CPF: {user["cpf"]}"
                 )
                 print()
@@ -55,11 +74,20 @@ def delete_user():
 
 def search_user():
         users = bd.load_data(bd.data)
+        if users is None:
+                print('List not found')
+                time.sleep(3)
+                return
+        elif not users:
+                print('Empty list')
+                time.sleep(3)
+                return
+        
         option = input('enter the name of the user you want to find: ')
         encontred_users = 0
         for i, user in enumerate(users):
                 if user["name"][:3] == option[:3]:
-                        print(f"{i+1}: {user["name"]}")
+                        print(f"{i+1}: {user["name"]} ID: {user["ID"]}")
                         encontred_users += 1
         if encontred_users == 0:
                 print("No users were found")                
