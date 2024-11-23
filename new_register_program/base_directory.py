@@ -2,11 +2,9 @@ import json
 import os
 
 Base_dir = os.path.dirname(os.path.abspath(__file__))
-utff = os.path.join(Base_dir, "/codeDecode/utf-8_list.json")
+utff = os.path.join(Base_dir, "codeDecode/utf-8_list.json")
 data = os.path.join(Base_dir, "data.json")
-print(Base_dir)
-print(utff)
-print(data)
+
 
 
 def load_data(data):
