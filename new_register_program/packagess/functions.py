@@ -46,6 +46,9 @@ def delete_user():
                 print('Empty list')
                 time.sleep(3)
                 return
+        for i, user in enumerate(users):
+                print(f"{i+1}: Name: {user["name"]} ID: {user["ID"]} CPF: {user["cpf"]} NUMBER: {user["number"]} AGE: {user["idade"]}")
+                
         option = input("[1] Delete for indice [2] Delete by ID: ")
         if option == "2":
                 os.system("cls")

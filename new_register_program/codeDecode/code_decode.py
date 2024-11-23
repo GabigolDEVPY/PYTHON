@@ -3,6 +3,7 @@ import os
 import json
 
 
+
 Base_dir = os.path.dirname(os.path.abspath(__file__))
 utf = os.path.join(Base_dir, "utf-8_list.json")
 
@@ -17,6 +18,8 @@ def load_utf():
 utf = load_utf()
 
 def code(users):
+    if users == []:
+        return []
     for user in users:
         new_id = ''
         for number in user["ID"]:
@@ -45,37 +48,72 @@ def code(users):
                 if number == digit["Caractere"]:
                     new_cpf += digit['UTF-8']
         user["cpf"] = new_cpf
-        return users
-        
-        
-def decode(users):
-    for user in users:
-        new_id = ''
-        for number[:2] in user["ID"]:
+
+    
+        new_number = ''
+        for number in user["number"]:
             for digit in utf:
-                if number == digit["UTF-8"]:
+                if number == digit["Caractere"]:
+                    new_number += digit['UTF-8']
+        user["number"] = new_number
+
+        return users    
+        
+users = [{"ID": "3231333236353130373034", "name": "6761627269656c", "idade": "3139", "number": "393938373337323236", "cpf": "3730333534303236363734"}]
+
+def decode(users):
+    if users == []:
+        return []
+    for user in users:
+        string_text = user["ID"]
+        new_id = ''
+        two = ""
+        for number in range(0, len(string_text), 2):
+            two = string_text[number:number+2]
+            for digit in utf:
+                if two == digit["UTF-8"]:
                     new_id += digit['Caractere']
         user["ID"] = new_id
         
+        string_text = user["name"]
         new_name = ''
-        for number[:2] in user["name"]:
+        two = ""
+        for number in range(0, len(string_text), 2):
+            two = string_text[number:number+2]
             for digit in utf:
-                if number[:2] == digit["UTF-8"]:
+                if two == digit["UTF-8"]:
                     new_name += digit['Caractere']
         user["name"] = new_name
         
+        string_text = user["idade"]
         new_idade = ''
-        for number[:2] in user["idade"]:
+        two = ""
+        for number in range(0, len(string_text), 2):
+            two = string_text[number:number+2]
             for digit in utf:
-                if number[:2] == digit["UTF-8"]:
+                if two == digit["UTF-8"]:
                     new_idade += digit['Caractere']
         user["idade"] = new_idade
         
-        new_cpf = ''
-        for number[:2] in user["cpf"]:
+        string_text = user["number"]
+        new_number = ''
+        two = ""
+        for number in range(0, len(string_text), 2):
+            two = string_text[number:number+2]
             for digit in utf:
-                if number == digit["UTF-8"]:
+                if two == digit["UTF-8"]:
+                    new_number += digit['Caractere']
+        user["number"] = new_number
+        
+        string_text = user["cpf"]
+        new_cpf = ''
+        two = ""
+        for number in range(0, len(string_text), 2):
+            two = string_text[number:number+2]
+            for digit in utf:
+                if two == digit["UTF-8"]:
                     new_cpf += digit['Caractere']
         user["cpf"] = new_cpf
         return users
+    
 
