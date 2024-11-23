@@ -38,4 +38,7 @@ while True:
     if value == 5:
         break
     interact_display(value)
+    
+    
+
 

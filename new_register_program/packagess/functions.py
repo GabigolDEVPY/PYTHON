@@ -66,7 +66,7 @@ def delete_user():
                 return
         os.system("cls")
         for i, user in enumerate(users):
-                print(f"{i+1}: NAME: {user["name"]} ID: {user["ID"]}\n"
+                print(f"{i+1}: Name: {user['name']} ID: {user['ID']}\n"
                 f"CPF: {user["cpf"]}"
                 )
                 print()
@@ -94,7 +94,7 @@ def search_user():
         encontred_users = 0
         for i, user in enumerate(users):
                 if user["name"][:3] == option[:3]:
-                        print(f"{i+1}: {user["name"]} ID: {user["ID"]}")
+                        print(f"{i+1}: Name: {user['name']} ID: {user['ID']}")
                         encontred_users += 1
         if encontred_users == 0:
                 print("No users were found")                
