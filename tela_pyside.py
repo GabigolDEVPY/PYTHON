@@ -3,6 +3,12 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 import sys
 
+lista_user = [
+    {"nome": "gabriel", "cpf": "56453"},
+    {"nome": "gabi", "cpf": "44534"},
+]
+
+
 app = QApplication(sys.argv)
 window = QMainWindow()
 central_widget = QWidget()
@@ -25,7 +31,9 @@ def add_frase():
 
 botao1.clicked.connect(add_frase)
 
-
+for user in lista_user:
+    lista.addItem(f"Name: {user["nome"]}    CPF: {user["cpf"]}")
+    
 
 layout.addWidget(botao1)
 layout.addWidget(lista)
