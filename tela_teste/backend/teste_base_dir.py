@@ -22,20 +22,4 @@ def save_file(lista):
 
 
 
-def add_client():
-    users = load_file()
-    nome = input("Type client name: ")
-    cpf = input("Type client cpf: ")
-    
-    add_client = {
-        "Nome": nome,
-        "CPF": cpf 
-    }
-    users.append(add_client)
-    save_file(users)
-
-
-while True:
-    add_client()
-
 
