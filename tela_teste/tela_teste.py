@@ -61,25 +61,39 @@ def delete():
     tb.save_file(users)
 
 def edit(user):
-    layout = QGridLayout()
+    layout = QVBoxLayout()
     central_widget = QWidget()
     window.setWindowTitle("SYSTEM REGISTER")
+    window.resize(400, 200)
     central_widget.setLayout(layout)
     window.setCentralWidget(central_widget)
+
     
+
     Name_line = QLineEdit()
     cpf_line = QLineEdit()
     phone_line = QLineEdit()
-    # nametext = QTextLine()
+
     
+    Hlayout_name = QHBoxLayout()
+    name_text = QLabel("Name:")
+    Hlayout_name.addWidget(name_text)
+    Hlayout_name.addWidget(Name_line)
+    layout.addLayout(Hlayout_name)
     
+    Hlayout_cpf = QHBoxLayout()
+    cpf_text = QLabel("CPF:")
+    Hlayout_cpf.addWidget(cpf_text)
+    Hlayout_cpf.addWidget(cpf_line)
+    layout.addLayout(Hlayout_cpf)
     
-    # layout.addWidget(nametext)
-    layout.addWidget(Name_line)
-    layout.addWidget(cpf_line)
-    layout.addWidget(phone_line)
-    
-    
+    Hlayout_phone = QHBoxLayout()
+    phone_text = QLabel("PHONE:")
+    Hlayout_phone.addWidget(phone_text)
+    Hlayout_phone.addWidget(phone_line)
+    layout.addLayout(Hlayout_phone)
+
+
 
 button.clicked.connect(add_name)
 delete_button.clicked.connect(delete)
