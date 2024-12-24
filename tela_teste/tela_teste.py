@@ -68,9 +68,15 @@ def janela():
             }
             lista.addItem(f"{numerate+1}. Name: {user['Name']}")
             message.setText("Registering")
+            linha_name.clear()
+            linha_phone.clear()
+            linha_cpf.clear()
             users.append(user)
             tb.save_file(users)
             
+        elif len(name) > 50:
+            message.setText('very long name')
+            message.setStyleSheet("color: #ff0000;")
         elif len(name) < 3:
             message.setText('Name incomplete')
             message.setStyleSheet("color: #ff0000;")
@@ -98,7 +104,6 @@ def janela():
         users = tb.load_file()
         select_line = lista.currentRow() 
         print(select_line)
-        message.setText(f"User {users[select_line]["Name"]} Deleted")
         lista.takeItem(select_line)
 
         del users[select_line -1]
@@ -133,6 +138,9 @@ def janela():
                 window_edit.close()
 
 
+            elif len(name) > 50:
+                message.setText('very long name')
+                message.setStyleSheet("color: #ff0000;")
             elif len(name) < 3:
                 message_user.setText('Name incomplete')
                 message_user.setStyleSheet("color: #ff0000;")
