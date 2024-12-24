@@ -75,7 +75,7 @@ def janela():
             tb.save_file(users)
             
         elif len(name) > 50:
-            message.setText('very long name')
+            message.setText('name cannot exceed 50 characters')
             message.setStyleSheet("color: #ff0000;")
         elif len(name) < 3:
             message.setText('Name incomplete')
@@ -139,7 +139,7 @@ def janela():
 
 
             elif len(name) > 50:
-                message.setText('very long name')
+                message.setText('name cannot exceed 50 characters')
                 message.setStyleSheet("color: #ff0000;")
             elif len(name) < 3:
                 message_user.setText('Name incomplete')
@@ -160,6 +160,7 @@ def janela():
 
             elif len(phone) != 11:
                 message_user.setText('Phone inválid')
+                message_user.setStyleSheet("color: #ff0000;")
 
     
 
