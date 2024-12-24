@@ -158,9 +158,9 @@ def janela():
         
         
         window_edit = QDialog()
+        window_edit.setFixedSize(400, 300)
         window_edit.setStyleSheet("background-color: #002953;")
         window_edit.setWindowTitle("EDIT USER")
-        window_edit.resize(400, 200)
 
         layout = QVBoxLayout()
         window_edit.setLayout(layout)
