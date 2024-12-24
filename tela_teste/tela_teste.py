@@ -4,6 +4,7 @@ from PySide6.QtWidgets import *
 import sys
 import os
 from backend import teste_base_dir as tb, gen_id as gi, valid_cpf as vc
+import time
 
 def janela():
     app = QApplication(sys.argv)
@@ -11,11 +12,13 @@ def janela():
     window.setFixedSize(500, 500)
     layout = QGridLayout()
     central_widget = QWidget()
+    central_widget.setStyleSheet("background-color: #004080;")
     window.setWindowTitle("SYSTEM REGISTER")
     central_widget.setLayout(layout)
     window.setCentralWidget(central_widget)
     lista = QListWidget()
     message = QLabel()
+    message.setText("Registering")
     
 
     linha_name = QLineEdit()
@@ -64,52 +67,98 @@ def janela():
                     "CPF": linha_cpf.text()         
             }
             lista.addItem(f"{numerate+1}. Name: {user['Name']}")
+            message.setText("Registering")
             users.append(user)
             tb.save_file(users)
+            
+        elif len(name) < 3:
+            message.setText('Name incomplete')
+            message.setStyleSheet("color: #ff0000;")
+                
         elif cpf_valid == 1:
-            message.setText('CPF DOES NOT CONTAIN 11 DIGITS')
+            message.setText('CPF Does not contain 11 digits')
+            message.setStyleSheet("color: #ff0000;")
                 
         elif cpf_valid == 2:
-            message.setText('ONLY TYPE NUMBERS IN YOUR CPF')
+            message.setText('Only type numbers in your CPF')
+            message.setStyleSheet("color: #ff0000;")
                 
-        elif cpf_valid == 1:
-            message.setText('CPF DOES NOT CONTAIN 11 DIGITS')
+        elif cpf_valid == 3:
+            message.setText('CPF Inválid')
+            message.setStyleSheet("color: #ff0000;")
                 
-        elif len(name) < 3:
-            message.setText('Name incomplete')    
 
         elif len(phone) != 11:
-            message.setText('Phone inválid')    
+            message.setText('Phone inválid')
+            message.setStyleSheet("color: #ff0000;")    
 
         
     
     def delete():
         users = tb.load_file()
-        select_line = lista.currentRow()
+        select_line = lista.currentRow() 
         print(select_line)
-        del users[select_line]
+        message.setText(f"User {users[select_line]["Name"]} Deleted")
         lista.takeItem(select_line)
+
+        del users[select_line -1]
         tb.save_file(users)
         lista.clear()
         charge_names()
         
     def edit(user):
+        message_user = QLabel()
+        message_user.setText("Editing User")
+        user_id_label = QLabel()
         user_num = int(user[0])
         users = tb.load_file()
         user_atual = users[user_num - 1]
         def save_user():
-            user_atual["Name"] = Name_line.text()
-            user_atual["CPF"] = cpf_line.text()
-            user_atual["Phone"] = phone_line.text()
-            tb.save_file(users)
-            lista.clear()
-            charge_names()
-            window_edit.close()
+            phone = phone_line.text()
+            name = Name_line.text()
+            cpf = cpf_line.text()
+            
+            cpf_valid = vc.verify(cpf)
+            
+            if len(name) > 2 and cpf_valid == 4 and len(phone) == 11:
+                user_atual["Name"] = Name_line.text()
+                user_atual["CPF"] = cpf_line.text()
+                user_atual["Phone"] = phone_line.text()
+                tb.save_file(users)
+                message_user.setText("User edited and saved")
+                lista.clear()
+                charge_names()
+                QApplication.processEvents()
+                time.sleep(1)
+                window_edit.close()
+
+
+            elif len(name) < 3:
+                message_user.setText('Name incomplete')
+                message_user.setStyleSheet("color: #ff0000;")
+                    
+            elif cpf_valid == 1:
+                message_user.setText('CPF Does not contain 11 digits')
+                message_user.setStyleSheet("color: #ff0000;")
+                    
+            elif cpf_valid == 2:
+                message_user.setText('Only type numbers in your CPF')
+                message_user.setStyleSheet("color: #ff0000;")
+                    
+            elif cpf_valid == 3:
+                message_user.setText('CPF Inválid')
+                message_user.setStyleSheet("color: #ff0000;")
+                    
+
+            elif len(phone) != 11:
+                message_user.setText('Phone inválid')
+
     
 
         
         
         window_edit = QDialog()
+        window_edit.setStyleSheet("background-color: #002953;")
         window_edit.setWindowTitle("EDIT USER")
         window_edit.resize(400, 200)
 
@@ -119,7 +168,9 @@ def janela():
         button_save = QPushButton("SAVE")
         button_cancel = QPushButton("CANCEL")
         
-
+        
+        user_id_label.setText(f"ID. {user_atual["ID"]}")
+        layout.addWidget(user_id_label)
 
         Name_line = QLineEdit()
         Name_line.setText(user_atual["Name"])
@@ -129,17 +180,17 @@ def janela():
         
         phone_line = QLineEdit()
         phone_line.setText(user_atual["Phone"])
-
-
         
+
+
         Hlayout_name = QHBoxLayout()
-        name_text = QLabel("Name:")
+        name_text = QLabel("Name:   ")
         Hlayout_name.addWidget(name_text)
         Hlayout_name.addWidget(Name_line)
         layout.addLayout(Hlayout_name)
         
         Hlayout_cpf = QHBoxLayout()
-        cpf_text = QLabel("CPF:")
+        cpf_text = QLabel("CPF:      ")
         Hlayout_cpf.addWidget(cpf_text)
         Hlayout_cpf.addWidget(cpf_line)
         layout.addLayout(Hlayout_cpf)
@@ -150,18 +201,21 @@ def janela():
         Hlayout_phone.addWidget(phone_line)
         layout.addLayout(Hlayout_phone)
         
+        layout.addWidget(message_user)
         layout.addWidget(button_cancel)
         layout.addWidget(button_save)
         button_cancel.clicked.connect(window_edit.close)
         button_save.clicked.connect(save_user)
         window_edit.exec()
-        
+    no_user = "No users were selected to delete"
+    no_user_edit = "No users were selected to edit"
         
         
         
     button.clicked.connect(add_name)
-    delete_button.clicked.connect(delete)
-    edit_button.clicked.connect(lambda: edit(lista.currentItem().text() if lista.selectedIndexes() else message.setText("   NO USERS WERE SELECTED")))
+    delete_button.clicked.connect(lambda: delete() if lista.selectedIndexes() else (message.setText(no_user), message.setStyleSheet("color: #ff0000;")))
+    edit_button.clicked.connect(lambda: edit(lista.currentItem().text()) if lista.selectedIndexes() else (message.setText(no_user_edit), message.setStyleSheet("color: #ff0000;")))
+
 
 
     def charge_names():
