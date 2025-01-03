@@ -32,6 +32,5 @@ print(*copia_profunda, sep="\n")
 
 
 outra = [{**p, 'preco': round(p['preco'] * 1.1, 2)} for p in copy.deepcopy(produtos)]
-outra = [{**p, 'preco': round(p['preco'] * 1.1, 2)} for p in copy.deepcopy(produtos)]
-outra = [{**p, 'preco': round(p['preco'] * 1.1, 2)} for p in copy.deepcopy(produtos)]
+
 print(*outra, sep="\n")
