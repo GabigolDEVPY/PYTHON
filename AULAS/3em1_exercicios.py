@@ -33,4 +33,7 @@ print(*copia_profunda, sep="\n")
 
 outra = [{**p, 'preco': round(p['preco'] * 1.1, 2)} for p in copy.deepcopy(produtos)]
 
+use_sorted = sorted(produtos, key= lambda p: p['nome'])
+print(use_sorted)
+
 print(*outra, sep="\n")
