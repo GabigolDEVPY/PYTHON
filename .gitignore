@@ -1,4 +1,7 @@
 /new_register_program/data.json
 /new_register_program/teste.py
 /venv
-/ambiente_virtual/include
+/ambiente_virtual/Include
+/ambiente_virtual/Lib
+/ambiente_virtual/Scripts
+/ambiente_virtual/pyvenv.cfg
