@@ -18,10 +18,10 @@ def tela():
     layout_lados = QHBoxLayout() #criando layout para colocar lado esquerdo e direito
     
     #layout lado esquerdo
-    layout_1 = QVBoxLayout()
+    layout_1 = QVBoxLayout()   #layout do lado esquerdo
     linha_texto_valor = QLabel("VALOR")
     linha_valor_inicial = QLineEdit()
-    linha_valor_inicial.setFixedSize(235, 30)
+    linha_valor_inicial.setFixedSize(235, 30)  #setando tamanho fixo da linha
     linha_valor_inicial.setPlaceholderText("00,00")
     linha_taxa_juros = QLabel("TAXA DE JUROS")
     taxa_de_juros = QLineEdit()
