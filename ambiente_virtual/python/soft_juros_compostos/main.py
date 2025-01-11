@@ -5,8 +5,8 @@ from python.soft_juros_compostos.backend.calcular_juros import calcular_juros
 import sys
 
 def tela():
-    window = QMainWindow() #tela principal
-    window.setFixedSize(500, 300)
+    window = QMainWindow() #tela principal 
+    window.setFixedSize(500, 300) #ajustando tamanho fixo tela principal
     central_widget = QWidget()      #widget central
     layout = QVBoxLayout() # layout de todos
     central_widget.setLayout(layout)     #centra_widget
