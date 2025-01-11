@@ -15,7 +15,7 @@ def tela():
     button.setFixedSize(483, 40)
     
     # layout dos lados
-    layout_lados = QHBoxLayout()
+    layout_lados = QHBoxLayout() #criando layout para colocar lado esquerdo e direito
     
     #layout lado esquerdo
     layout_1 = QVBoxLayout()
