@@ -36,7 +36,7 @@ def tela():
     layout_lados.addLayout(layout_1)
     
     #layout lado direito
-    layout_2 = QVBoxLayout()
+    layout_2 = QVBoxLayout() # criando o layout direito 
     linha_texto_valor_mensal = QLabel("VALOR MENSAL")
     linha_valor_mensal = QLineEdit()
     linha_valor_mensal.setFixedSize(235, 30)
