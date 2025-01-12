@@ -54,7 +54,7 @@ def tela():
     layout_lados.addLayout(layout_2)
     
     # informações centrais/resultado etc
-    texto_central = QLabel()
+    texto_central = QLabel() #adicionado o campo que será exibida as informações
     texto_central.setStyleSheet("font-size: 14px ;")
     
     # adicionado layout, botoes e texto central no layout principal
