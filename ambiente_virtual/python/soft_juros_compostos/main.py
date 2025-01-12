@@ -24,7 +24,7 @@ def tela():
     linha_valor_inicial.setFixedSize(235, 30)  #setando tamanho fixo da linha
     linha_valor_inicial.setPlaceholderText("00,00")
     linha_taxa_juros = QLabel("TAXA DE JUROS")
-    taxa_de_juros = QLineEdit()
+    taxa_de_juros = QLineEdit() # taxa de juros, linha para inserir
     taxa_de_juros.setFixedSize(235, 30)
     taxa_de_juros.setPlaceholderText("8,00")
     
