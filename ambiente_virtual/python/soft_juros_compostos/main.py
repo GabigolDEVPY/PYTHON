@@ -66,7 +66,7 @@ def tela():
     button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), float(linha_valor_mensal.text()), int(periodo.text()), texto_central))
     
     
-    window.show()
+    window.show() # exibindo a tela
     app.exec()
 
 
