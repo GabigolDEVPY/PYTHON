@@ -6,7 +6,7 @@ import sys
 
 def tela():
     window = QMainWindow() #tela principal 
-    window.setFixedSize(540, 320) #ajustando tamanho fixo tela principal
+    window.setFixedSize(540, 350) #ajustando tamanho fixo tela principal
     window.setWindowTitle("CALCULADORA DE JUROS COMPOSTOS")
     central_widget = QWidget()      #widget central
     layout = QVBoxLayout() # layout de todos
@@ -14,8 +14,8 @@ def tela():
     window.setCentralWidget(central_widget)
     button = QPushButton("CALCULAR")    #botão calcular
     button.setFixedSize(520, 40)
-    button = QPushButton("LIMPAR")    #botão calcular
-    button.setFixedSize(520, 40)
+    button_limpar = QPushButton("LIMPAR")    #botão calcular
+    button_limpar.setFixedSize(520, 40)
     titulo = QLabel(" CALCULADORA DE JUROS COMPOSTOS\n"
                     "    ")
     titulo.setStyleSheet("font-size: 20px; font-weight: bold;")
@@ -96,8 +96,11 @@ def tela():
     layout.addLayout(layout_lados)
     layout.addWidget(texto_central)
     layout.addWidget(button)
+    layout.addWidget(button_limpar)
     
-
+    # definindo opção limpar caixas de entrada
+    
+    button_limpar.clicked.connect(lambda: (linha_valor_inicial.clear(), linha_valor_mensal.clear(), taxa_de_juros.clear(), periodo.clear()))
     button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), selecao_meses_anual.currentText(), texto_central))
     
     
@@ -106,7 +109,7 @@ def tela():
 
 
 app = QApplication(sys.argv)
-app.setStyle("Plastique")
+app.setStyle("Fusion")
 tela()
 
 

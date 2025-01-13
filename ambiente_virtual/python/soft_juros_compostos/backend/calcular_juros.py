@@ -17,8 +17,8 @@ def calcular_juros(valor_inicial, taxa_juros, tipo_juros, valor_investido_meses,
         valor_final += juros 
         valor_final += valor_investido_meses
         
-    texto.setText(f"TOTAL:   {valor_final:.2f}\n"
-                f"JUROS:   {valor_juros:.2f}\n"
-                f"VALOR TOTAL INVESTIDO:   {valor_inicial + (valor_investido_meses * meses):.2f}")
+    texto.setText(f" TOTAL:   R$ {valor_final:.2f}\n"
+                f" JUROS:   R$ {valor_juros:.2f}\n"
+                f" VALOR TOTAL INVESTIDO:  R$ {valor_inicial + (valor_investido_meses * meses):.2f}")
     
     
