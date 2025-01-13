@@ -6,7 +6,7 @@ import sys
 
 def tela():
     window = QMainWindow() #tela principal 
-    window.setFixedSize(540, 450) #ajustando tamanho fixo tela principal
+    window.setFixedSize(540, 540) #ajustando tamanho fixo tela principal
     window.setWindowTitle("CALCULADORA DE JUROS COMPOSTOS")
     central_widget = QWidget()      #widget central
     layout = QVBoxLayout() # layout de todos
@@ -94,24 +94,27 @@ def tela():
     
     # informações centrais/resultado etc
     lista_informações = QListWidget()
+    lista_informações.setFixedSize(520, 200)
     texto_central = QLabel() #adicionado o campo que será exibida as informações
     texto_central.setStyleSheet("font-size: 14px ;")
-    texto_central.setFixedSize(300, 50)
-    
-    
+    texto_central.setFixedSize(520, 20)
+    texto_resultado = QLabel()
+    texto_resultado.setFixedSize(520, 40)
     
     # adicionado layout, botoes e texto central no layout principal
     layout.addWidget(titulo)
     layout.addLayout(layout_lados)
-    layout.addWidget(lista_informações)
     layout.addWidget(texto_central)
+    layout.addWidget(lista_informações)
+    layout.addWidget(texto_resultado)
     layout.addWidget(button)
     layout.addWidget(button_limpar)
     
     # definindo opção limpar caixas de entrada
     
-    button_limpar.clicked.connect(lambda: (linha_valor_inicial.clear(), linha_valor_mensal.clear(), taxa_de_juros.clear(), periodo.clear(), texto_central.clear()))
-    button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), selecao_meses_anual.currentText(), texto_central))
+    button_limpar.clicked.connect(lambda: (linha_valor_inicial.clear(), linha_valor_mensal.clear(), taxa_de_juros.clear(), periodo.clear(), texto_central.clear(), lista_informações.clear(), texto_resultado.clear()))
+    button.clicked.connect(lambda: (texto_central.clear(), lista_informações.clear()) if lista_informações.count() > 1 else None)
+    button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), selecao_meses_anual.currentText(), texto_central, lista_informações, texto_resultado))
     
     
     window.show() # exibindo a tela
