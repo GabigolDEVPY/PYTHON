@@ -3,7 +3,7 @@ from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 
 
-def calcular_juros(valor_inicial, taxa_juros, valor_investido_meses, meses, texto):
+def calcular_juros(valor_inicial, taxa_juros, tipo_juros, valor_investido_meses, meses, texto):
     valor_juros = 0
     valor_final = valor_inicial
     for _ in range(meses):
