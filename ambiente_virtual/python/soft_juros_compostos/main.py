@@ -6,16 +6,19 @@ import sys
 
 def tela():
     window = QMainWindow() #tela principal 
-    window.setFixedSize(540, 350) #ajustando tamanho fixo tela principal
+    window.setFixedSize(540, 450) #ajustando tamanho fixo tela principal
     window.setWindowTitle("CALCULADORA DE JUROS COMPOSTOS")
     central_widget = QWidget()      #widget central
     layout = QVBoxLayout() # layout de todos
     central_widget.setLayout(layout)     #centra_widget
     window.setCentralWidget(central_widget)
     button = QPushButton("CALCULAR")    #botão calcular
+    button.setStyleSheet("QPushButton:hover {font-size: 14px; background-color: #aa4000;  color: #ffffff; }")
     button.setFixedSize(520, 40)
     button_limpar = QPushButton("LIMPAR")    #botão calcular
     button_limpar.setFixedSize(520, 40)
+    button_limpar.setStyleSheet("QPushButton:hover {font-size: 14px; background-color: #910000;  color: #ffffff; }")
+
     titulo = QLabel(" CALCULADORA DE JUROS COMPOSTOS\n"
                     "    ")
     titulo.setStyleSheet("font-size: 20px; font-weight: bold;")
@@ -37,6 +40,7 @@ def tela():
     
     tipo_de_juros = QComboBox() # criando caixa de seleção de opção juros
     tipo_de_juros.setFixedSize(65, 30)
+    tipo_de_juros.setStyleSheet("QComboBox:hover {font-size: 14px; background-color: #aa4000;  color: #ffffff; }")
     tipo_de_juros.addItems(["Mensal", "Anual"])
 
     
@@ -71,6 +75,7 @@ def tela():
     #criando caixinha de seleção meses, ou anos
     selecao_meses_anual = QComboBox()
     selecao_meses_anual.setFixedSize(65, 30)
+    selecao_meses_anual.setStyleSheet("QComboBox:hover {font-size: 14px; background-color: #aa4000;  color: #ffffff; }")
     selecao_meses_anual.addItems(["Meses", "Anos"])
     
     # layout direito para linha juros e tipo mensal ou anual
@@ -88,19 +93,24 @@ def tela():
     layout_lados.addLayout(layout_2)
     
     # informações centrais/resultado etc
+    lista_informações = QListWidget()
     texto_central = QLabel() #adicionado o campo que será exibida as informações
     texto_central.setStyleSheet("font-size: 14px ;")
+    texto_central.setFixedSize(300, 50)
+    
+    
     
     # adicionado layout, botoes e texto central no layout principal
     layout.addWidget(titulo)
     layout.addLayout(layout_lados)
+    layout.addWidget(lista_informações)
     layout.addWidget(texto_central)
     layout.addWidget(button)
     layout.addWidget(button_limpar)
     
     # definindo opção limpar caixas de entrada
     
-    button_limpar.clicked.connect(lambda: (linha_valor_inicial.clear(), linha_valor_mensal.clear(), taxa_de_juros.clear(), periodo.clear()))
+    button_limpar.clicked.connect(lambda: (linha_valor_inicial.clear(), linha_valor_mensal.clear(), taxa_de_juros.clear(), periodo.clear(), texto_central.clear()))
     button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), selecao_meses_anual.currentText(), texto_central))
     
     

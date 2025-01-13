@@ -11,10 +11,9 @@ def calcular_juros(valor_inicial, taxa_juros, tipo_juros, valor_investido_meses,
         valor_juros += juros
         valor_final += juros 
         valor_final += valor_investido_meses
-
-    print(valor_final)
+        
     
-calcular_juros(1000, 12, "Anual", 300, 12, "Anos") 
+calcular_juros(1000, 12, "Mensal", 300, 12, "Anos") 
 
 
     
