@@ -6,13 +6,20 @@ import sys
 
 def tela():
     window = QMainWindow() #tela principal 
-    window.setFixedSize(540, 300) #ajustando tamanho fixo tela principal
+    window.setFixedSize(540, 320) #ajustando tamanho fixo tela principal
+    window.setWindowTitle("CALCULADORA DE JUROS COMPOSTOS")
     central_widget = QWidget()      #widget central
     layout = QVBoxLayout() # layout de todos
     central_widget.setLayout(layout)     #centra_widget
     window.setCentralWidget(central_widget)
     button = QPushButton("CALCULAR")    #botão calcular
     button.setFixedSize(520, 40)
+    button = QPushButton("LIMPAR")    #botão calcular
+    button.setFixedSize(520, 40)
+    titulo = QLabel(" CALCULADORA DE JUROS COMPOSTOS\n"
+                    "    ")
+    titulo.setStyleSheet("font-size: 20px; font-weight: bold;")
+    
     
     # layout dos lados
     layout_lados = QHBoxLayout() #criando layout para colocar lado esquerdo e direito
@@ -60,6 +67,8 @@ def tela():
     periodo = QLineEdit()
     periodo.setFixedSize(180, 30)
     periodo.setPlaceholderText("12")
+    
+    #criando caixinha de seleção meses, ou anos
     selecao_meses_anual = QComboBox()
     selecao_meses_anual.setFixedSize(65, 30)
     selecao_meses_anual.addItems(["Meses", "Anos"])
@@ -83,12 +92,13 @@ def tela():
     texto_central.setStyleSheet("font-size: 14px ;")
     
     # adicionado layout, botoes e texto central no layout principal
+    layout.addWidget(titulo)
     layout.addLayout(layout_lados)
     layout.addWidget(texto_central)
     layout.addWidget(button)
     
 
-    button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), texto_central))
+    button.clicked.connect(lambda: calcular_juros(float(linha_valor_inicial.text()), float(taxa_de_juros.text()), tipo_de_juros.currentText(), float(linha_valor_mensal.text()), int(periodo.text()), selecao_meses_anual.currentText(), texto_central))
     
     
     window.show() # exibindo a tela
@@ -96,6 +106,7 @@ def tela():
 
 
 app = QApplication(sys.argv)
+app.setStyle("Plastique")
 tela()
 
 
