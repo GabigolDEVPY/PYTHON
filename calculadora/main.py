@@ -10,10 +10,16 @@ if __name__ == '__main__':
     app = QApplication()
     window = MainWindow()
     
-    Display = Display()
-    window.addWidgetToVLayout(Display)
+    #display
+    
+    display = Display()
+    window.addWidgetToVLayout(display)
+
 
     window.adjustFixedSize()
     
+
     window.show()
+    app.setStyle("Windows11")
     app.exec()
+    
