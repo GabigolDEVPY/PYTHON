@@ -12,7 +12,7 @@ def janela():
     central_widget.setLayout(layout_principal)
     
     visor = QLabel("text")
-    visor.setStyleSheet("border-radius: 5px; color: #800000; border: 2px solid #400080;font-size: 36px;")
+    visor.setStyleSheet("border-radius: 5px; color: #808080; border: 2px solid #e44501;font-size: 32px;")
     visor.setFixedSize(300, 33)
     layout_principal.addWidget(visor)
     botao1 = QPushButton("1")
@@ -24,5 +24,6 @@ def janela():
     app.exec()
     
 app = QApplication(sys.argv)
+app.setStyle("Fusion")
 janela()
     
