@@ -9,4 +9,4 @@ function(lista1)
 
 
 
-    
+lista = []
