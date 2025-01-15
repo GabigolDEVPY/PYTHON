@@ -1,23 +1,23 @@
-from PySide6.QtCore import *
-from PySide6.QtWidgets import *
-from PySide6.QtGui import *
-import sys
+from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget
+
 
 class MainWindow(QMainWindow):
     def __init__(self, parent: QWidget | None = None, *args, **kwargs) -> None:
         super().__init__(parent, *args, **kwargs)
+
+        # Configurando o layout básico
         self.cw = QWidget()
-        self.vlayout = QVBoxLayout()
-        self.cw.setLayout(self.vlayout)
+        self.vLayout = QVBoxLayout()
+        self.cw.setLayout(self.vLayout)
         self.setCentralWidget(self.cw)
-        
-        # titulo da janela
-        self.setWindowTitle("CALCULADORA")
+
+        # Título da janela
+        self.setWindowTitle('Calculadora')
 
     def adjustFixedSize(self):
+        # Última coisa a ser feita
         self.adjustSize()
         self.setFixedSize(self.width(), self.height())
-        
-    def addWidgetToVLayout(self, widget: QWidget):
-        self.vlayout.addWidget(widget)
-        self.adjustFixedSize()    
+
+    def addToVLayout(self, widget: QWidget):
+        self.vLayout.addWidget(widget)
