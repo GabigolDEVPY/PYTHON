@@ -12,7 +12,6 @@ if __name__ == '__main__':
     # Cria a aplicação
     app = QApplication(sys.argv)
     window = MainWindow()
-    setupTheme()
     # Define o ícone
     icon = QIcon(str(WINDOW_ICON_PATH))
     window.setWindowIcon(icon)
