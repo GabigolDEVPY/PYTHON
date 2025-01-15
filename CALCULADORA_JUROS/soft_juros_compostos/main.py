@@ -1,7 +1,7 @@
 from PySide6.QtGui import *
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
-from python.soft_juros_compostos.backend.calcular_juros import calcular_juros
+from backend.calcular_juros import calcular_juros
 import sys
 
 def tela():
