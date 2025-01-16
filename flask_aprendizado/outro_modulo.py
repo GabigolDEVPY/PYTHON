@@ -1,3 +1,3 @@
 
 def saber_name_modulo():
-    return (__name__)
+    return "O lula é um viado"
