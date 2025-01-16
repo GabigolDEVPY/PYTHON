@@ -9,7 +9,7 @@ dados = load_data()
 def buscar(nome):
     for chave, dado in dados.items():
         if chave == nome:
-                return jsonify({chave: dado})
+                return ({chave: dado})
 
 if __name__ == "__main__":
     app.run(port=5000, host="localhost", debug=True)
