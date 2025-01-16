@@ -12,7 +12,7 @@ def load_data():
             return json.load(f)
         
     except:
-        return []
+        return {}
     
 def save_data(dados):
     try:
@@ -25,13 +25,5 @@ def save_data(dados):
 
 def criar_dado():
     result = load_data()
-    print(result)
-    nome = input("nome: ")
-    result.append(nome)
     save_data(result)
 
-criar_dado()
-
-result = load_data()
-
-print(result)

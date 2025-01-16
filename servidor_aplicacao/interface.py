@@ -1,6 +1,7 @@
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
+import requests
 import sys
 
 
@@ -29,9 +30,18 @@ def janela():
 
 
     def conectar_servidor():
-        return "nada"
+        print("deu certo")
+        nome = busca.text()
+        print(nome)
+        if not nome:
+            return resultados.addItem("digite um nome")
+        url = f"http://localhost:5000/buscar={nome}"
+        result = requests.get(url)
+        print(result)
+        resultados.addItem(result.text)
         
 
+    buton.clicked.connect(lambda: conectar_servidor())
 
 
 
