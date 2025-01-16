@@ -11,7 +11,8 @@ dados = {
 
 @app.route('/buscar', methods=['GET'])
 def buscar():
-    nome = request.args.get('nome')  # Pega o nome na URL
+    nome = request.args.get('noome')  # Pega o nome na URL
+    print(nome)
     if nome in dados:
         return jsonify({nome: dados[nome]})  # Retorna o resultado em JSON
     else:
