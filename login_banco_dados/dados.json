@@ -1,7 +1,1 @@
-[
-{
-    "login": "gabriel",
-    "senha": "gabriel1234",
-    "itens": ["maca", "morango", "pera", "mamao", "cachorro"]
-}
-]
+[{"login": "gabriel", "senha": "1234", "saldo": 0}]
