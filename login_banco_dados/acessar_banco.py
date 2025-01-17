@@ -12,7 +12,7 @@ def load_data():
             return json.load(f)
         
     except:
-        return {}
+        return []
     
 def save_data(dados):
     try:
