@@ -47,7 +47,7 @@ def tela():
         login = linha_login.text()
         senha = linha_senha.text()
         print("deu certo")
-        url = f"http://192.168.100.101:5000/login/login={login}&senha={senha}"
+        url = f"http://localhost:5000/login/login={login}&senha={senha}"
         result = requests.get(url)
         if result.status_code == 404:
             return caixa.setText("Usuário não encontrado")
@@ -66,7 +66,7 @@ def tela():
         "saldo": saldo
         }
         
-        url = "http://192.168.100.101:5000/register"
+        url = "http://localhost:5000/register"
         result = requests.put(url, json=dados)
         print(result)
         if result.status_code == 500:
