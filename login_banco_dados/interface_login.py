@@ -1,14 +1,19 @@
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 from PySide6.QtCore import *
+import tela_inicial_interface
 import requests
 import sys
 
+
+janela_login = None
+
 def tela():
     app = QApplication(sys.argv)
-    window = QMainWindow()
+    global janela_login
+    janela_login = QMainWindow()
     central_widget = QWidget()
-    window.setCentralWidget(central_widget)
+    janela_login.setCentralWidget(central_widget)
     layout_principal = QVBoxLayout()
     central_widget.setLayout(layout_principal)
     
@@ -51,7 +56,9 @@ def tela():
         result = requests.get(url)
         if result.status_code == 404:
             return caixa.setText("Usuário não encontrado")
-            
+        
+        janela_login.close()
+        tela_inicial_interface.tela_inicial()  
         caixa.setText(f" Seja Bem-vindo {login} seu saldo é de R$: {result.text}")
         
     def acessar_servidor_registrar():
@@ -79,8 +86,7 @@ def tela():
     
     
     #dsd
-    window.show()
+    janela_login.show()
     app.exec()
-    
     
 tela()    
