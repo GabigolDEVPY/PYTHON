@@ -8,10 +8,10 @@ dados = []
 def inicio(valor, numero):
     return jsonify(retornandolista.retornar(valor, numero))
 
-@app.route('/cadastrar/nome==<nome>', methods= ['PUT'])
+@app.route('/cadastrar/<nome>', methods=['PUT'])
 def cadastrar(nome):
     result = request.json
-    dados.append(result)
+    dados.append(str(result))
     return f"nome {nome} cadastrado"
 
 @app.route('/consultar/nome=<nome>', methods= ['GET'])
