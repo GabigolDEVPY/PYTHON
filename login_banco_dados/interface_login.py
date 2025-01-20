@@ -10,6 +10,7 @@ janela_login = None
 
 def tela():
     app = QApplication(sys.argv)
+    app.setStyle('windows11')
     global janela_login
     janela_login = QMainWindow()
     central_widget = QWidget()
@@ -53,13 +54,16 @@ def tela():
         senha = linha_senha.text()
         print("deu certo")
         url = f"http://localhost:5000/login/login={login}&senha={senha}"
-        result = requests.get(url)
+        try:
+            result = requests.get(url)
         if result.status_code == 404:
             return caixa.setText("Usuário não encontrado")
+        else: 
+            return caixa.setText("Não foi possível se conectar ao servidor")
+
         
         janela_login.close()
         tela_inicial_interface.tela_inicial()  
-        caixa.setText(f" Seja Bem-vindo {login} seu saldo é de R$: {result.text}")
         
     def acessar_servidor_registrar():
         login = linha_login.text()

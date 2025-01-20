@@ -9,6 +9,7 @@ janela_inicial = None
 def tela_inicial():
     global janela_inicial
     janela_inicial = QMainWindow()
+    janela_inicial.setFixedSize(400, 600)
     central_widget = QWidget()
     janela_inicial.setCentralWidget(central_widget)
     layout_principal = QVBoxLayout()
