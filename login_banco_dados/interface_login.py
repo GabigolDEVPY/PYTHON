@@ -89,7 +89,7 @@ def tela():
     botao_register.clicked.connect(lambda: acessar_servidor_registrar())
     
     
-    #dsd
+    #dsd coments
     janela_login.show()
     app.exec()
     
