@@ -56,10 +56,10 @@ def tela():
         url = f"http://localhost:5000/login/login={login}&senha={senha}"
         try:
             result = requests.get(url)
-        if result.status_code == 404:
-            return caixa.setText("Usuário não encontrado")
-        else: 
-            return caixa.setText("Não foi possível se conectar ao servidor")
+            if result.status_code == 404:
+                return caixa.setText("Usuário não encontrado")
+            else: 
+                return caixa.setText("Não foi possível se conectar ao servidor")
 
         
         janela_login.close()
