@@ -55,16 +55,21 @@ def tela():
         print("deu certo")
         url = f"http://localhost:5000/login/login={login}&senha={senha}"
         try:
+            # Enviando a requisição ao servidor
             result = requests.get(url)
+
+            # Tratando as respostas do servidor
             if result.status_code == 404:
-                return caixa.setText("Usuário não encontrado")
-            else: 
-                return caixa.setText("Não foi possível se conectar ao servidor")
-        except ConnectionError():
-            caixa.setText("falhou")
-        
-        janela_login.close()
-        tela_inicial_interface.tela_inicial()  
+                caixa.setText("Usuário não encontrado")
+            elif result.status_code == 200:
+                caixa.setText("Login bem-sucedido!")
+                janela_login.close()
+                tela_inicial_interface.tela_inicial()
+            else:
+                caixa.setText(f"Erro no servidor: {result.status_code}")
+        except ConnectionError:
+            # Tratando erro de conexão
+            caixa.setText("Falha ao conectar ao servidor")
         
     def acessar_servidor_registrar():
         login = linha_login.text()
