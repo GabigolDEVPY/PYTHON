@@ -60,7 +60,8 @@ def tela():
                 return caixa.setText("Usuário não encontrado")
             else: 
                 return caixa.setText("Não foi possível se conectar ao servidor")
-
+        except ConnectionError():
+            caixa.setText("falhou")
         
         janela_login.close()
         tela_inicial_interface.tela_inicial()  
