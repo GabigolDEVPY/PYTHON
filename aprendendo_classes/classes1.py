@@ -5,10 +5,10 @@ class Pessoa():
         self.idade = idade
         self.peso = peso
         
+    def deixa_maiusculo(self):
+        return self.nome.upper()
 
-    
-Pessoa1 = Pessoa("gabriel", "rocha", 18, 78 )
-pessoa2 = Pessoa("não", "sei", 18, None)
 
-print(Pessoa1.nome)    
-print(pessoa2.peso)    
+pessoa1 = Pessoa("gabriel", "rocha", 18, 79)
+
+print(pessoa1.deixa_maiusculo())
