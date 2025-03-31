@@ -1,13 +1,18 @@
 import random
-from perguntas import perguntas
+from perguntas import perguntas as pr
+import json
+import os
+import copy
 
-perguntas = perguntas
+local = os.path.join((os.path.abspath(os.path.dirname(__file__))), "dados.json")
 
+
+perguntas = copy.deepcopy(pr)
 perguntas_atualizadas = []
 
 for pergunta in perguntas:
-    resposta_correta = pergunta["alternativas"][pergunta["resposta_correta"]]
-    nova_lista = pergunta["alternativas"]
+    resposta_correta = pergunta["opcoes"][pergunta["resposta_correta"]]
+    nova_lista = pergunta["opcoes"]
     random.shuffle(nova_lista)
     indice = -1
     for alternativa in nova_lista:
@@ -24,4 +29,6 @@ for pergunta in perguntas:
     perguntas_atualizadas.append(nova_pergunta)
 
 
-print(perguntas_atualizadas)
+
+with open(local, "w", encoding="UTF-8") as f:
+    json.dump(perguntas_atualizadas, f, ensure_ascii=False, indent=4)

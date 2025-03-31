@@ -1,0 +1,1322 @@
+[
+    {
+        "pergunta": "A placa de advertência A-1a indica:",
+        "alternativas": [
+            "curva acentuada à direita",
+            "interseção em T",
+            "estrada sinuosa",
+            "curva suave à esquerda"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa de regulamentação R-1 significa:",
+        "alternativas": [
+            "proibido estacionar",
+            "proibido ultrapassar",
+            "pare",
+            "dê a preferência"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-42b alerta para:",
+        "alternativas": [
+            "animais selvagens",
+            "veículos lentos",
+            "gado na pista",
+            "trânsito de pedestres"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "Qual é o significado da placa R-6a?",
+        "alternativas": [
+            "proibido virar à direita",
+            "estacionamento regulamentado",
+            "proibido parar",
+            "proibido estacionar"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-18 indica:",
+        "alternativas": [
+            "declive acentuado",
+            "pista escorregadia",
+            "aclive acentuado",
+            "estrada estreita"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-19 determina:",
+        "alternativas": [
+            "velocidade máxima de 40 km/h",
+            "proibido ultrapassar",
+            "velocidade mínima de 40 km/h",
+            "dê a preferência"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-3a alerta para:",
+        "alternativas": [
+            "curva acentuada à esquerda",
+            "interseção em Y",
+            "estrada sinuosa",
+            "curva em S"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "Qual o significado da placa R-2?",
+        "alternativas": [
+            "dê a preferência",
+            "pare",
+            "sentido único",
+            "proibido virar à esquerda"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-21a indica:",
+        "alternativas": [
+            "escola",
+            "tráfego de ciclistas",
+            "trânsito de pedestres",
+            "crianças"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-5a proíbe:",
+        "alternativas": [
+            "virar à esquerda",
+            "retornar",
+            "virar à direita",
+            "ultrapassar"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-8 alerta para:",
+        "alternativas": [
+            "interseção em T",
+            "cruzamento",
+            "rotatória",
+            "bifurcação"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-7 indica:",
+        "alternativas": [
+            "proibido ultrapassar",
+            "proibido estacionar",
+            "proibido buzinar",
+            "proibido retornar"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-33a significa:",
+        "alternativas": [
+            "chuva intensa",
+            "neblina",
+            "pista escorregadia",
+            "ventos fortes"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-24a determina:",
+        "alternativas": [
+            "proibido virar à direita",
+            "mão dupla",
+            "sentido único",
+            "circulação obrigatória à esquerda"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-12 alerta para:",
+        "alternativas": [
+            "ponte estreita",
+            "estreitamento de pista",
+            "pista irregular",
+            "obras na pista"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-9 proíbe:",
+        "alternativas": [
+            "estacionar",
+            "ultrapassar",
+            "buzinar",
+            "parar"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-15 indica:",
+        "alternativas": [
+            "pista escorregadia",
+            "aclive acentuado",
+            "declive acentuado",
+            "curva acentuada"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-4a proíbe:",
+        "alternativas": [
+            "virar à esquerda",
+            "retornar",
+            "virar à direita",
+            "estacionar"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-30a alerta para:",
+        "alternativas": [
+            "tráfego de máquinas agrícolas",
+            "veículos lentos",
+            "animais na pista",
+            "trânsito de pedestres"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-28 determina:",
+        "alternativas": [
+            "peso máximo de 10 toneladas",
+            "velocidade máxima de 40 km/h",
+            "comprimento máximo de 10 metros",
+            "altura máxima de 4 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-24 indica:",
+        "alternativas": [
+            "máquinas na via",
+            "tráfego intenso",
+            "homens trabalhando",
+            "obras na pista"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-3 proíbe:",
+        "alternativas": [
+            "ultrapassar",
+            "retornar",
+            "virar à esquerda",
+            "virar à direita"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-5a alerta para:",
+        "alternativas": [
+            "bifurcação",
+            "rotatória",
+            "cruzamento em Y",
+            "interseção em T"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-15 indica:",
+        "alternativas": [
+            "proibido trânsito de pedestres",
+            "proibido trânsito de motos",
+            "proibido trânsito de veículos",
+            "proibido trânsito de caminhões"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-27 significa:",
+        "alternativas": [
+            "área urbana",
+            "área escolar",
+            "área rural",
+            "área de estacionamento"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-25a determina:",
+        "alternativas": [
+            "sentido obrigatório à esquerda",
+            "proibido virar à direita",
+            "circulação obrigatória à direita",
+            "sentido obrigatório à direita"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-9 alerta para:",
+        "alternativas": [
+            "interseção em T",
+            "bifurcação",
+            "rotatória",
+            "cruzamento"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-10 proíbe:",
+        "alternativas": [
+            "acesso a motos",
+            "acesso a pedestres",
+            "acesso a veículos",
+            "acesso a ciclistas"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-32a indica:",
+        "alternativas": [
+            "chuva intensa",
+            "pista molhada",
+            "neblina",
+            "ventos fortes"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-20 determina:",
+        "alternativas": [
+            "velocidade recomendada de 30 km/h",
+            "proibido ultrapassar a 30 km/h",
+            "velocidade mínima de 30 km/h",
+            "velocidade máxima de 30 km/h"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-14 alerta para:",
+        "alternativas": [
+            "pista irregular",
+            "curva em S",
+            "declive acentuado",
+            "estrada sinuosa"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-8 proíbe:",
+        "alternativas": [
+            "buzinar",
+            "parar",
+            "estacionar",
+            "ultrapassar"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-20a indica:",
+        "alternativas": [
+            "trânsito de pedestres",
+            "trânsito de veículos lentos",
+            "trânsito de ciclistas",
+            "trânsito de animais"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-27 determina:",
+        "alternativas": [
+            "altura máxima de 3,5 metros",
+            "comprimento máximo de 3,5 metros",
+            "peso máximo de 3,5 toneladas",
+            "velocidade máxima de 35 km/h"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-7 alerta para:",
+        "alternativas": [
+            "cruzamento",
+            "interseção em T",
+            "rotatória",
+            "bifurcação"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-16 proíbe:",
+        "alternativas": [
+            "trânsito de bicicletas",
+            "trânsito de caminhões",
+            "trânsito de motos",
+            "trânsito de pedestres"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-25 indica:",
+        "alternativas": [
+            "tráfego intenso",
+            "homens trabalhando",
+            "máquinas na pista",
+            "obras na pista"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-26 determina:",
+        "alternativas": [
+            "proibido virar à esquerda",
+            "circulação obrigatória à direita",
+            "sentido único à direita",
+            "circulação obrigatória à esquerda"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-11a alerta para:",
+        "alternativas": [
+            "ponte estreita",
+            "estreitamento de pista à esquerda",
+            "estreitamento de pista à direita",
+            "pista irregular"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-12 proíbe:",
+        "alternativas": [
+            "trânsito de caminhões",
+            "trânsito de motos",
+            "trânsito de bicicletas",
+            "trânsito de pedestres"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-31a indica:",
+        "alternativas": [
+            "tráfego de máquinas agrícolas",
+            "tráfego de ciclistas",
+            "tráfego de veículos lentos",
+            "tráfego de pedestres"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-29 determina:",
+        "alternativas": [
+            "comprimento máximo de 12 metros",
+            "peso máximo de 10 toneladas",
+            "altura máxima de 4 metros",
+            "velocidade máxima de 40 km/h"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-2a alerta para:",
+        "alternativas": [
+            "curva acentuada à direita",
+            "curva suave à direita",
+            "curva em S",
+            "estrada sinuosa"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-13 proíbe:",
+        "alternativas": [
+            "trânsito de pedestres",
+            "trânsito de caminhões",
+            "trânsito de motos",
+            "trânsito de ônibus"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-34 indica:",
+        "alternativas": [
+            "ventos fortes",
+            "queda de barreiras",
+            "neblina",
+            "chuva intensa"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-17 proíbe:",
+        "alternativas": [
+            "trânsito de bicicletas",
+            "trânsito de cavalos",
+            "trânsito de pedestres",
+            "trânsito de motos"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-19 alerta para:",
+        "alternativas": [
+            "declive acentuado",
+            "aclive acentuado",
+            "curva acentuada",
+            "pista escorregadia"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-21a determina:",
+        "alternativas": [
+            "velocidade máxima de 40 km/h",
+            "proibido ultrapassar a 40 km/h",
+            "velocidade recomendada de 40 km/h",
+            "velocidade mínima de 40 km/h"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-28 indica:",
+        "alternativas": [
+            "área de estacionamento",
+            "área rural",
+            "área urbana",
+            "área escolar"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-30 proíbe:",
+        "alternativas": [
+            "trânsito de caminhões",
+            "trânsito de tratores",
+            "trânsito de motos",
+            "trânsito de ônibus"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-10a alerta para:",
+        "alternativas": [
+            "ponte estreita",
+            "estreitamento central da pista",
+            "estreitamento à direita",
+            "pista irregular"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-18 proíbe:",
+        "alternativas": [
+            "trânsito de motos",
+            "trânsito de pedestres",
+            "trânsito de bicicletas",
+            "trânsito de charretes"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-6a indica:",
+        "alternativas": [
+            "bifurcação",
+            "interseção em T",
+            "cruzamento em X",
+            "rotatória"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-22 determina:",
+        "alternativas": [
+            "proibido ultrapassar a 50 km/h",
+            "velocidade recomendada de 50 km/h",
+            "velocidade mínima de 50 km/h",
+            "velocidade máxima de 50 km/h"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-13 alerta para:",
+        "alternativas": [
+            "ponte estreita",
+            "estrada sinuosa",
+            "pista escorregadia",
+            "ponte móvel"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-23 proíbe:",
+        "alternativas": [
+            "trânsito de pedestres",
+            "trânsito de bicicletas",
+            "trânsito de veículos pesados",
+            "trânsito de veículos leves"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-22 indica:",
+        "alternativas": [
+            "trânsito de crianças",
+            "trânsito de pedestres",
+            "trânsito de ciclistas",
+            "trânsito de idosos"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-31 determina:",
+        "alternativas": [
+            "proibido tráfego de cargas leves",
+            "proibido tráfego de cargas perigosas",
+            "proibido tráfego de pedestres",
+            "proibido tráfego de motos"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-29 alerta para:",
+        "alternativas": [
+            "heliporto",
+            "tráfego aéreo baixo",
+            "aeroporto",
+            "área militar"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-32 proíbe:",
+        "alternativas": [
+            "trânsito de bicicletas",
+            "trânsito de pedestres",
+            "trânsito de veículos com tração animal",
+            "trânsito de veículos motorizados"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-36 indica:",
+        "alternativas": [
+            "trânsito de trens",
+            "passagem de nível com barreira",
+            "passagem de nível sem barreira",
+            "cruzamento com ferrovia"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-33 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com peso superior a 4 toneladas",
+            "proibido tráfego de veículos com comprimento superior a 4 metros",
+            "proibido tráfego de veículos com velocidade superior a 40 km/h",
+            "proibido tráfego de veículos com altura superior a 4 metros"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-4a alerta para:",
+        "alternativas": [
+            "curva acentuada à esquerda",
+            "curva em S",
+            "estrada sinuosa",
+            "curva suave à esquerda"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-34 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com peso superior a 2,5 toneladas",
+            "tráfego de veículos com largura superior a 2,5 metros",
+            "tráfego de veículos com altura superior a 2,5 metros",
+            "tráfego de veículos com comprimento superior a 2,5 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-37 indica:",
+        "alternativas": [
+            "cruzamento com ferrovia",
+            "passagem de nível sem barreira",
+            "tráfego de trens",
+            "passagem de nível com barreira"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-6b significa:",
+        "alternativas": [
+            "proibido estacionar",
+            "estacionamento regulamentado",
+            "proibido parar e estacionar",
+            "proibido virar à esquerda"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-16 alerta para:",
+        "alternativas": [
+            "estrada sinuosa",
+            "declive acentuado",
+            "pista irregular",
+            "desmoronamento"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-35 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com peso superior a 5 toneladas",
+            "proibido tráfego de veículos com altura superior a 5 metros",
+            "proibido tráfego de veículos com largura superior a 5 metros",
+            "proibido tráfego de veículos com comprimento superior a 5 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-38 indica:",
+        "alternativas": [
+            "passagem de nível com barreira",
+            "tráfego de trens",
+            "passagem de nível sem barreira",
+            "cruzamento com ferrovia"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-11 proíbe:",
+        "alternativas": [
+            "acesso a bicicletas",
+            "acesso a veículos pesados",
+            "acesso a pedestres",
+            "acesso a motos"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-26 alerta para:",
+        "alternativas": [
+            "congestionamento",
+            "tráfego intenso",
+            "obras na pista",
+            "homens trabalhando"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-36 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 3 metros",
+            "proibido tráfego de veículos com peso superior a 3 toneladas",
+            "proibido tráfego de veículos com altura superior a 3 metros",
+            "proibido tráfego de veículos com largura superior a 3 metros"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-39 indica:",
+        "alternativas": [
+            "passagem de nível com barreira",
+            "passagem de nível sem barreira",
+            "tráfego de trens",
+            "cruzamento com ferrovia"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-14 proíbe:",
+        "alternativas": [
+            "trânsito de carros",
+            "trânsito de caminhões",
+            "trânsito de tratores",
+            "trânsito de motos"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-40 alerta para:",
+        "alternativas": [
+            "gado na pista",
+            "cavaleiros na pista",
+            "animais selvagens",
+            "tráfego de animais"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-37 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 15 metros",
+            "proibido tráfego de veículos com altura superior a 15 metros",
+            "proibido tráfego de veículos com peso superior a 15 toneladas",
+            "proibido tráfego de veículos com largura superior a 15 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-41 indica:",
+        "alternativas": [
+            "animais selvagens",
+            "tráfego de cavalos",
+            "gado na pista",
+            "trânsito de pedestres"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-38 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com largura superior a 2 metros",
+            "tráfego de veículos com altura superior a 2 metros",
+            "tráfego de veículos com comprimento superior a 2 metros",
+            "tráfego de veículos com peso superior a 2 toneladas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-17 alerta para:",
+        "alternativas": [
+            "queda de barreiras",
+            "pista escorregadia",
+            "declive acentuado",
+            "desmoronamento"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-39 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com altura superior a 20 metros",
+            "proibido tráfego de veículos com comprimento superior a 20 metros",
+            "proibido tráfego de veículos com peso superior a 20 toneladas",
+            "proibido tráfego de veículos com largura superior a 20 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-43 indica:",
+        "alternativas": [
+            "tráfego de cavalos",
+            "tráfego de ciclistas",
+            "tráfego de pedestres",
+            "tráfego de animais"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-40 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com largura superior a 4,5 metros",
+            "tráfego de veículos com comprimento superior a 4,5 metros",
+            "tráfego de veículos com peso superior a 4,5 toneladas",
+            "tráfego de veículos com altura superior a 4,5 metros"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-44 alerta para:",
+        "alternativas": [
+            "tráfego de máquinas agrícolas",
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de veículos lentos"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-41 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com peso superior a 3,5 toneladas",
+            "proibido tráfego de veículos com altura superior a 3,5 metros",
+            "proibido tráfego de veículos com largura superior a 3,5 metros",
+            "proibido tráfego de veículos com comprimento superior a 3,5 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-45 indica:",
+        "alternativas": [
+            "tráfego de veículos lentos",
+            "tráfego de ciclistas",
+            "tráfego de pedestres",
+            "tráfego de máquinas agrícolas"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-42 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com comprimento superior a 8 metros",
+            "tráfego de veículos com largura superior a 8 metros",
+            "tráfego de veículos com peso superior a 8 toneladas",
+            "tráfego de veículos com altura superior a 8 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-46 alerta para:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de animais",
+            "tráfego de cavalos"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-43 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 10 metros",
+            "proibido tráfego de veículos com largura superior a 10 metros",
+            "proibido tráfego de veículos com peso superior a 10 toneladas",
+            "proibido tráfego de veículos com altura superior a 10 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-47 indica:",
+        "alternativas": [
+            "tráfego de ciclistas",
+            "tráfego de pedestres",
+            "tráfego de máquinas agrícolas",
+            "tráfego de cavalos"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-44 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com largura superior a 2,8 metros",
+            "tráfego de veículos com comprimento superior a 2,8 metros",
+            "tráfego de veículos com altura superior a 2,8 metros",
+            "tráfego de veículos com peso superior a 2,8 toneladas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-48 alerta para:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de veículos lentos",
+            "tráfego de animais",
+            "tráfego de ciclistas"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-45 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 4,2 metros",
+            "proibido tráfego de veículos com peso superior a 4,2 toneladas",
+            "proibido tráfego de veículos com largura superior a 4,2 metros",
+            "proibido tráfego de veículos com altura superior a 4,2 metros"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-49 indica:",
+        "alternativas": [
+            "tráfego de ciclistas",
+            "tráfego de cavalos",
+            "tráfego de máquinas agrícolas",
+            "tráfego de pedestres"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-46 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com comprimento superior a 12 metros",
+            "tráfego de veículos com largura superior a 12 metros",
+            "tráfego de veículos com peso superior a 12 toneladas",
+            "tráfego de veículos com altura superior a 12 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-50 alerta para:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de animais",
+            "tráfego de veículos lentos",
+            "tráfego de ciclistas"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-47 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 3,8 metros",
+            "proibido tráfego de veículos com peso superior a 3,8 toneladas",
+            "proibido tráfego de veículos com altura superior a 3,8 metros",
+            "proibido tráfego de veículos com largura superior a 3,8 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-51 indica:",
+        "alternativas": [
+            "tráfego de cavalos",
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de máquinas agrícolas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-48 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com largura superior a 2,6 metros",
+            "tráfego de veículos com peso superior a 2,6 toneladas",
+            "tráfego de veículos com altura superior a 2,6 metros",
+            "tráfego de veículos com comprimento superior a 2,6 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-52 alerta para:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de veículos lentos",
+            "tráfego de ciclistas",
+            "tráfego de animais"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-49 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com comprimento superior a 15 metros",
+            "proibido tráfego de veículos com peso superior a 15 toneladas",
+            "proibido tráfego de veículos com largura superior a 15 metros",
+            "proibido tráfego de veículos com altura superior a 15 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-53 indica:",
+        "alternativas": [
+            "tráfego de máquinas agrícolas",
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de cavalos"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-50 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com comprimento superior a 4,8 metros",
+            "tráfego de veículos com altura superior a 4,8 metros",
+            "tráfego de veículos com peso superior a 4,8 toneladas",
+            "tráfego de veículos com largura superior a 4,8 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-54 alerta para:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de animais",
+            "tráfego de ciclistas",
+            "tráfego de veículos lentos"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-51 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com altura superior a 3,2 metros",
+            "proibido tráfego de veículos com largura superior a 3,2 metros",
+            "proibido tráfego de veículos com peso superior a 3,2 toneladas",
+            "proibido tráfego de veículos com comprimento superior a 3,2 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-55 indica:",
+        "alternativas": [
+            "tráfego de máquinas agrícolas",
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de cavalos"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-52 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com peso superior a 18 toneladas",
+            "tráfego de veículos com altura superior a 18 metros",
+            "tráfego de veículos com largura superior a 18 metros",
+            "tráfego de veículos com comprimento superior a 18 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-56 alerta para:",
+        "alternativas": [
+            "tráfego de veículos lentos",
+            "tráfego de animais",
+            "tráfego de pedestres",
+            "tráfego de ciclistas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-53 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com largura superior a 4,6 metros",
+            "proibido tráfego de veículos com comprimento superior a 4,6 metros",
+            "proibido tráfego de veículos com altura superior a 4,6 metros",
+            "proibido tráfego de veículos com peso superior a 4,6 toneladas"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-57 indica:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de cavalos",
+            "tráfego de máquinas agrícolas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-54 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com comprimento superior a 2,4 metros",
+            "tráfego de veículos com peso superior a 2,4 toneladas",
+            "tráfego de veículos com altura superior a 2,4 metros",
+            "tráfego de veículos com largura superior a 2,4 metros"
+        ],
+        "resposta_correta": 3,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-58 alerta para:",
+        "alternativas": [
+            "tráfego de ciclistas",
+            "tráfego de animais",
+            "tráfego de veículos lentos",
+            "tráfego de pedestres"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-55 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com altura superior a 25 metros",
+            "proibido tráfego de veículos com largura superior a 25 metros",
+            "proibido tráfego de veículos com peso superior a 25 toneladas",
+            "proibido tráfego de veículos com comprimento superior a 25 metros"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-59 indica:",
+        "alternativas": [
+            "tráfego de cavalos",
+            "tráfego de ciclistas",
+            "tráfego de pedestres",
+            "tráfego de máquinas agrícolas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-56 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com largura superior a 5 metros",
+            "tráfego de veículos com altura superior a 5 metros",
+            "tráfego de veículos com peso superior a 5 toneladas",
+            "tráfego de veículos com comprimento superior a 5 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-60 alerta para:",
+        "alternativas": [
+            "tráfego de ciclistas",
+            "tráfego de animais",
+            "tráfego de veículos lentos",
+            "tráfego de pedestres"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-57 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com altura superior a 3,6 metros",
+            "proibido tráfego de veículos com largura superior a 3,6 metros",
+            "proibido tráfego de veículos com peso superior a 3,6 toneladas",
+            "proibido tráfego de veículos com comprimento superior a 3,6 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-61 indica:",
+        "alternativas": [
+            "tráfego de pedestres",
+            "tráfego de ciclistas",
+            "tráfego de máquinas agrícolas",
+            "tráfego de cavalos"
+        ],
+        "resposta_correta": 2,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-58 proíbe:",
+        "alternativas": [
+            "tráfego de veículos com peso superior a 30 toneladas",
+            "tráfego de veículos com altura superior a 30 metros",
+            "tráfego de veículos com largura superior a 30 metros",
+            "tráfego de veículos com comprimento superior a 30 metros"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa A-62 alerta para:",
+        "alternativas": [
+            "tráfego de veículos lentos",
+            "tráfego de animais",
+            "tráfego de pedestres",
+            "tráfego de ciclistas"
+        ],
+        "resposta_correta": 0,
+        "modulo": "Placas de Trânsito"
+    },
+    {
+        "pergunta": "A placa R-59 determina:",
+        "alternativas": [
+            "proibido tráfego de veículos com peso superior a 2,2 toneladas",
+            "proibido tráfego de veículos com largura superior a 2,2 metros",
+            "proibido tráfego de veículos com altura inferior a 2,2 metros",
+            "proibido tráfego de veículos com comprimento superior a 2,2 metros"
+        ],
+        "resposta_correta": 1,
+        "modulo": "Placas de Trânsito"
+    }
+]
