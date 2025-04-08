@@ -11,3 +11,9 @@ def count_even(numbers):
     return sum(x % 2 == 0 for x in numbers)
 
 print(count_even([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+
+def count_even(numbers):
+    return sum(x % 2 == 0 for x in numbers)
+
+
