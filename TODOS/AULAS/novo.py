@@ -13,19 +13,19 @@ produtos = [
 ]
 
 
-# def filtrar_preco(produto):
-#     return produto['preco'] > 100
+def filtrar_preco(produto):
+    return produto['preco'] > 100
 
 
-# novos_produtos = [
-#     p for p in produtos
-#     if p['preco'] > 100
-# ]
-# novos_produtos = filter(
-#     # lambda produto: produto['preco'] > 100,
-#     filtrar_preco,
-#     produtos
-# )
+novos_produtos = [
+    p for p in produtos
+    if p['preco'] > 100
+]
+novos_produtos = filter(
+    # lambda produto: produto['preco'] > 100,
+    filtrar_preco,
+    produtos
+)
 
 
 # print_iter(produtos)
@@ -34,3 +34,5 @@ produtos = [
 lista_filtrada = filter(lambda b: int(b["nome"][-1]) >= 3, produtos)
 lista_filtrada = list(lista_filtrada)
 print(lista_filtrada)
+
+
