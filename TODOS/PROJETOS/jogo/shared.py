@@ -16,7 +16,7 @@ def carregar_lista():
 
 # Função para limpar a tela
 def limpar():
-    os.system('clear')
+    os.system('cls')
 
 lista = carregar_lista()
 

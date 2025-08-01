@@ -1,15 +1,11 @@
 {
-    "meu_dinheiro": 59050,
+    "meu_dinheiro": 68900,
     "carros": [],
     "casas": [],
     "perifericos": [
         {
-            "item": "Teclado para gamers mec\u00e2nico",
-            "complemento": 700
-        },
-        {
-            "item": "Bateria externa",
-            "complemento": 250
+            "item": "Fone de ouvido sem fio",
+            "complemento": 500
         }
     ]
 }

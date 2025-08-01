@@ -15,7 +15,7 @@ def dinheiro_palavra():
         meu_dinheiro = dados["meu_dinheiro"]
         dinheiros(meu_dinheiro, dinheiro_acumulado)
         sair = input('Deseja sair? [S]im [N]ão: ')
-        os.system('clear')
+        os.system('cls')
         if sair.lower() == 's':
             dados["meu_dinheiro"] = meu_dinheiro + dinheiro_acumulado
             salvar_dados(dados)  # Salva o dinheiro acumulado ao sair
@@ -37,7 +37,7 @@ def dinheiro_palavra():
             tentativas += 1
             
             if len(letra) > 1:
-                os.system('clear')
+                os.system('cls')
                 dinheiros(meu_dinheiro, dinheiro_acumulado)
                 print('Digite apenas uma letra!!')
                 continue
@@ -54,14 +54,14 @@ def dinheiro_palavra():
                 else:
                     palavra_formada += " _ "
                     
-            os.system('clear')
+            os.system('cls')
             dinheiros(meu_dinheiro, dinheiro_acumulado)
             print(palavra_e_dica["item"])         
             print(palavra_formada)        
 
             if palavra_formada == palavra_secreta:
                 dinheiro_acumulado += 10000
-                os.system('clear')
+                os.system('cls')
                 dinheiros(meu_dinheiro, dinheiro_acumulado)
                 print(
                     'Você acertou a palavra secreta\n'
@@ -69,6 +69,6 @@ def dinheiro_palavra():
                     f'Você teve {tentativas} tentativas'
                 )
                 time.sleep(2)
-                os.system('clear')
+                os.system('cls')
                 break
 
