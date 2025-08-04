@@ -23,6 +23,7 @@ class Carro():
             return print("Motor está ligado")
         print("Motor está desligado")
 
+
 carro = Carro("Amarelo", 1400)
 print(carro.cor)
 print(carro.peso)
