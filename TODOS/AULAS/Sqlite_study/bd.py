@@ -40,7 +40,7 @@ cursor.executemany(sql, (
     {'nome': "Gabriel1"},
     {'nome': "Gabriel2"},
     {'nome': "Gabriel3"},
-    ))
+))
     
 connection.commit()
 
@@ -51,6 +51,29 @@ print(result)
 cursor.execute(f'SELECT * FROM {TABLE_NAME}')
 row = cursor.fetchone()
 print(row)
+
+cursor.execute(f"DELETE FROM {TABLE_NAME}")
+connection.commit()
+
+cursor.execute(f"SELECT * FROM {TABLE_NAME}")
+result = cursor.fetchall()
+print(result)
+
+cursor.executemany(f"INSERT INTO {TABLE_NAME} (nome) VALUES (:nome)", ({"nome": "Gabigooolas"},{"nome": "gabriel"}))
+cursor.execute(f"UPDATE {TABLE_NAME} SET nome = ? WHERE id = 153", ("Gabigolllllllllllllllllllllllllllllllllll",))
+cursor.execute(f"UPDATE {TABLE_NAME} SET nome = ? WHERE id = 153", ("Gabigolllllllllllllllllllllllllllllllllll",))
+connection.commit()
+
+
+
+
+
+
+
+
+
+
+
 
 cursor.close()
 connection.close()
