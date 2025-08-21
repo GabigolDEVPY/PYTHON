@@ -15,3 +15,4 @@ random.shuffle(nomes)
 novos_nomes = random.sample(nomes, k=2)
 print(nomes)   
 print(novos_nomes)
+

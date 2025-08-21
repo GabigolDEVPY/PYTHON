@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gabriel • Sobre mim</title>
+  <meta name="description" content="Mini site pessoal do Gabriel: quem sou, habilidades, projetos e contatos." />
+  <style>
+    :root {
+      --bg: #0f1220;
+      --panel: #151931;
+      --text: #e7e9f3;
+      --muted: #aab0c6;
+      --brand: #7c5cff;
+      --brand-2: #22d3ee;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    [data-theme="light"]{
+      --bg:#f7f8ff; --panel:#ffffff; --text:#1c2033; --muted:#57607a; --brand:#6d5efc; --brand-2:#0ea5e9;
+      --shadow: 0 10px 30px rgba(10, 20, 50, .08);
+    }
+    * { box-sizing: border-box; }
+    html, body { height:100%; }
+    body {
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 120% 20%, rgba(34,211,238,.25), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+    .container { width:min(1100px, 92%); margin-inline:auto; }
+    header {
+      position: sticky; top:0; z-index: 10; backdrop-filter: blur(8px);
+      background: color-mix(in srgb, var(--bg) 70%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--panel) 70%, transparent);
+    }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .brand { display:flex; gap:12px; align-items:center; text-decoration:none; color:var(--text); }
+    .logo {
+      width:36px; height:36px; border-radius:10px; display:grid; place-items:center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: var(--shadow);
+      font-weight:900; letter-spacing:.5px; color:#fff;
+    }
+    .navlinks { display:flex; gap:16px; flex-wrap:wrap; }
+    .navlinks a { color:var(--muted); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:10px; }
+    .navlinks a:hover { background: color-mix(in srgb, var(--panel) 85%, transparent); color:var(--text); }
+    .btn {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:white; border:none; padding:10px 14px; border-radius:12px; font-weight:700; cursor:pointer;
+      box-shadow: var(--shadow);
+    }
+    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:28px; align-items:center; padding:48px 0 28px; }
+    .card { background: var(--panel); border: 1px solid color-mix(in srgb, var(--panel) 75%, transparent); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow); }
+    h1 { margin:0 0 6px; font-size: clamp(28px, 5vw, 44px); line-height:1.15; }
+    h2 { margin:0 0 10px; font-size: clamp(20px, 3.4vw, 28px); }
+    p.lead { color: var(--muted); margin: 8px 0 18px; font-size: clamp(15px, 2.6vw, 18px); }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; }
+    .chip { padding:8px 12px; background: color-mix(in srgb, var(--panel) 85%, transparent); border:1px solid color-mix(in srgb, var(--panel) 70%, transparent); border-radius: 999px; color: var(--muted); font-weight:700; }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap:18px; }
+    .foot { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; color:var(--muted); font-size:14px; padding: 28px 0 40px; }
+    a.cta { text-decoration:none; color:#fff; }
+    .tag { font-size:12px; padding:4px 8px; border-radius:999px; background: color-mix(in srgb, var(--panel) 80%, transparent); color: var(--muted); border:1px solid color-mix(in srgb, var(--panel) 65%, transparent); }
+    .kpis { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+    .kpi { background: color-mix(in srgb, var(--panel) 85%, transparent); padding:10px 12px; border-radius:12px; border:1px solid color-mix(in srgb, var(--panel) 70%, transparent); display:flex; gap:8px; align-items:center; }
+    .kpi b { font-size:18px; }
+    .project { display:flex; flex-direction:column; gap:12px; }
+    .project h3 { margin:0; font-size:18px; }
+    .project p { margin:0; color:var(--muted); }
+    .project .meta { display:flex; gap:10px; align-items:center; }
+    .contact { display:grid; grid-template-columns: 1fr .8fr; gap:18px; align-items:stretch; }
+    .input { width:100%; padding:12px 14px; border-radius:12px; border:1px solid color-mix(in srgb, var(--panel) 65%, transparent); background: color-mix(in srgb, var(--panel) 85%, transparent); color: var(--text); }
+    textarea.input { min-height:120px; resize: vertical; }
+    .sr { position:absolute; left:-9999px; }
+    @media (max-width: 900px){
+      .hero, .contact { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top" aria-label="Página inicial">
+          <div class="logo">G</div>
+          <strong>Gabriel</strong>
+        </a>
+        <div class="navlinks" role="navigation" aria-label="Seções">
+          <a href="#sobre">Sobre</a>
+          <a href="#skills">Skills</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+          <button class="btn" id="themeBtn" title="Alternar tema">🌗 Tema</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Olá 👋</span>
+        <h1>Gabriel — o dev que a <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Moranguinha</span> jura que programa.</h1>
+        <p class="lead">Backend lover, Python enjoyer e aprendiz vitalício. Construo APIs, automatizo coisinhas e vivo brigando com ambiente virtual (e ganhando, quase sempre 😅).</p>
+        <div class="kpis">
+          <div class="kpi">🏋️‍♂️ <b>+16kg</b> desde a academia</div>
+          <div class="kpi">💻 <b>Python</b> & <b>Flask</b></div>
+          <div class="kpi">🎯 <b>Objetivo:</b> dev backend</div>
+        </div>
+        <p style="margin-top:14px">
+          <a class="cta btn" href="#contato">Fala comigo</a>
+          <span class="chip">Disponível para freelas ✨</span>
+        </p>
+      </div>
+      <div class="card" aria-hidden="true">
+        <div style="aspect-ratio:1/1; border-radius:12px; background: conic-gradient(from 180deg at 50% 50%, color-mix(in srgb, var(--brand) 85%, transparent), color-mix(in srgb, var(--brand-2) 85%, transparent), color-mix(in srgb, var(--panel) 90%, transparent)); display:grid; place-items:center; font-size:46px;">🍓</div>
+        <p class="lead" style="text-align:center; margin-top:12px">A benção da Moranguinha garante +10 de carisma.</p>
+      </div>
+    </section>
+
+    <section id="sobre" class="card">
+      <h2>Sobre mim</h2>
+      <p>Sou o Gabriel, 19 anos, brasileiro, focado em backend. Estudo Python (nível intermediário) e curto construir APIs com Flask, brincar com bancos de dados e transformar ideias em serviços que funcionam de verdade. Quando não estou codando, provavelmente estou treinando, estudando música ou apanhando de algum bug que eu mesmo criei.</p>
+      <div class="chips" aria-label="Preferências">
+        <span class="chip">Python</span>
+        <span class="chip">Flask</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">Automação</span>
+        <span class="chip">APIs REST</span>
+      </div>
+    </section>
+
+    <section id="skills" class="grid">
+      <div class="card">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>Design e implementação de APIs REST com Flask</li>
+          <li>Modelagem e consultas com MySQL</li>
+          <li>Ambientes virtuais, dependências e boas práticas</li>
+          <li>Testes básicos e documentação de endpoints</li>
+          <li>Deploy simples (Railway/Render) & versionamento com Git</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Stack atual</h2>
+        <ul>
+          <li>Python, Flask, Requests</li>
+          <li>HTML + CSS (o suficiente pra não passar vergonha)</li>
+          <li>MySQL / SQLite</li>
+          <li>Docker (iniciado)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Aprendendo agora</h2>
+        <ul>
+          <li>Argparse & CLIs</li>
+          <li>Flask maiorzinho (Blueprints, auth, sessões)</li>
+          <li>Boas práticas de APIs e logs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projetos" class="card">
+      <h2>Projetos</h2>
+      <div class="grid-2">
+        <article class="project">
+          <div class="tag">API</div>
+          <h3>Mini Banco Digital</h3>
+          <p>API de transferências Pix fake para estudo, com endpoints de criar conta, saldo e envio com confirmação.</p>
+          <div class="meta">
+            <span class="chip">Flask</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">JWT</span>
+          </div>
+        </article>
+        <article class="project">
+          <div class="tag">App</div>
+          <h3>Simulados DETRAN</h3>
+          <p>Aplicativo com questões temporizadas, feedback visual e resultados salvos localmente.</p>
+          <div class="meta">
+            <span class="chip">Flutter</span>
+            <span class="chip">SQLite</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="contact">
+      <div class="card">
+        <h2>Contato</h2>
+        <p>Curtiu? Manda uma mensagem. Se for a Moranguinha, ganha atendimento VIP e prioridade na fila. 😎🍓</p>
+        <form onsubmit="event.preventDefault(); alert('Valeu! Sua mensagem foi registrada (de mentirinha nesta demo).'); this.reset();" aria-label="Formulário de contato">
+          <label class="sr" for="nome">Nome</label>
+          <input class="input" id="nome" name="nome" placeholder="Seu nome" required>
+          <div style="height:10px"></div>
+          <label class="sr" for="email">Email</label>
+          <input class="input" id="email" type="email" name="email" placeholder="Seu email" required>
+          <div style="height:10px"></div>
+          <label class="sr" for="mensagem">Mensagem</label>
+          <textarea class="input" id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+          <div style="height:10px"></div>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="card">
+        <h2>Links</h2>
+        <ul>
+          <li>GitHub: <a href="#" style="color:var(--brand-2)">@gabriel</a></li>
+          <li>LinkedIn: <a href="#" style="color:var(--brand-2)">/in/gabriel</a></li>
+          <li>Email: <a href="mailto:gabriel@example.com" style="color:var(--brand-2)">gabriel@example.com</a></li>
+        </ul>
+        <p class="lead">Dica: troca os # pelos seus links reais.</p>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>© <span id="year"></span> Gabriel — Feito com café e teimosia.</span>
+      <span>Dark/Light • Responsivo • Single-file</span>
+    </footer>
+  </main>
+
+  <script>
+    const b = document.getElementById('themeBtn');
+    const root = document.body;
+    const saved = localStorage.getItem('theme');
+    if(saved){ root.setAttribute('data-theme', saved); }
+    b.addEventListener('click', ()=>{
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
